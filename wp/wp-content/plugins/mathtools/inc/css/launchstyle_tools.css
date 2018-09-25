@@ -1,0 +1,435 @@
+/*
+
+This file contains styling information for the enVision HTML5 CMP3 Tools Launch pages.
+Last edited January 25, 2013.
+*/
+
+@font-face {
+	src: url(../fonts/normal-500-normal.x-font-woff) format('woff');
+	font-family: normalFont;
+	font-weight: 500;
+	font-style: normal;
+}
+
+html {
+    height: 100%;
+}
+
+body 
+{
+	height: 100%;
+    margin: 0;
+
+	background: #224082 url('../images/tools_bkrdgradient_01.png') repeat-x; /* Note: Have to use this or an image because in IE 9 the gradient causes a chopping-off of content bug */
+	background-position: top left;
+}
+
+#pagecontent 
+{
+	border: solid 2px #223F82;
+	
+	/* gray->white gradient */
+	background: #FCFCFD;
+	background-position: top left;
+
+	box-shadow: inset 0 -200px 400px #DDE4E8;  /* bkrd gradient: white to light gray */
+
+	/* Rounded corners: */
+	 -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -khtml-border-radius: 20px;
+    border-radius: 20px;
+	
+	width: 694px;
+	margin-left: auto;
+	margin-right: auto;
+	
+	min-height: 530px;
+}
+#toolsheader
+{
+
+	background: url('../images/digits_logo-01.png') no-repeat;
+	background-position: left;
+	/*width: 325px;*/
+	width: 694px;
+	height: 56px;
+	margin-left: auto;	
+	margin-right: auto;	
+	margin-top: 20px;
+	margin-bottom: 15px;
+}
+#subheader
+{
+	background: url('../images/dotted_hr.png') no-repeat;
+	background-position: bottom;
+	width: 578px;
+	height: 45px;
+	margin-left: 30px;
+	margin-top: 15px;
+	margin-bottom: 10px;
+	
+	color: #1D4382;		
+	font-size: 19pt;
+	font-family: normalFont;
+	font-weight: 500;	
+	text-align: left;	
+}
+
+.toolbuttons
+{
+	margin-top: 26px;
+}
+
+.toolbuttons_container_left
+{
+	margin-left: 30px;
+	margin-top: 0px;
+	width: 308px;
+	float: left;
+}
+
+.toolbuttons_container_right
+{
+	margin-top: 0px;
+	margin-left: 18px;
+	width: 308px;
+	float: left;	
+}
+
+.activity_hr 
+{
+	background: url('../images/activity_hr.png') no-repeat;
+	width: 100%;
+	height: 3px;
+	padding: 0px;
+	margin: 0px;
+}
+
+/* -----------------------
+	Sub-menu Styling
+	Note: The arrow is an image in the markup, so changing the border will require changing the arrow image to match.
+---------------------- */
+
+.button_submenu_container { position: relative; }
+
+.pearson_modepopup {
+
+	z-index: 1000;
+
+	display: none; /* hidden by default */
+	border: solid 2px #223F82;
+	
+	/* show top gradient bar.. */
+	/*
+	background: #C2CCD1 url('../images/gradients_submenuHeader.png') no-repeat;
+	background-position: top right;
+	padding-top: 35px;
+	*/
+	background: #C2CCD1 url('../images/gradients_submenuHeader.png') repeat-x;
+	
+	position: absolute;
+	top: -55px; /* This works as a nice default for a 2-link call-out, it's adjusted in the html for other cases */
+	left: 250px;
+	
+	width: 200px;
+	
+	/* Drop-shadow: */
+	-moz-box-shadow: 0px 0px 10px #666;
+	-webkit-box-shadow: 0px 0px 10px #666;
+	box-shadow: 0px 0px 10px #666;
+	/* For IE 8 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=10, Direction=135, Color='#666666')";
+	/* For IE 5.5 - 7 */
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=10, Direction=135, Color='#666666');
+	
+	/* Rounded corners: */
+	-moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    border-radius: 10px;
+}
+
+	.pearson_modepopup .callout_arrow {
+		float: left;
+		margin-left: -23px;
+	}
+		.pearson_modepopup .double {
+			margin-top: 66px;
+		}
+		.pearson_modepopup .triple {
+			margin-top: 66px;
+		}
+		.pearson_modepopup  .quad {
+			margin-top: 66px;
+		}
+		.pearson_modepopup  .cinq {
+			margin-top: 66px;
+		}
+
+	.pearson_modepopup a:link{
+		display: inline-block;
+		padding-top: 8px;
+		padding-bottom: 8px;
+		padding-left: 20px;
+		width: 100%;
+		
+		-moz-box-sizing:    border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing:        border-box;
+		
+		
+		color: #223F82;
+		font-size: 12pt;
+		font-family: normalFont;
+		font-weight: 500;
+		text-decoration: none;		
+	}
+	.pearson_modepopup a:hover {
+		display: inline-block;
+		background: url('../images/gradients_submenuHover.png') repeat-x;
+		background-position: bottom left;
+		
+		color: #223F82;
+	}
+	.pearson_modepopup a:active {
+		color: #223F82;
+	}
+	.pearson_modepopup a:visited {
+		color: #223F82;
+	}
+	
+	.pearson_modepopup ul {
+		list-style: none;
+		padding: 0px;	
+		margin: 0px;
+	}
+		/* close 'x' at the top of the sub-menu: */
+		.pearson_modepopup ul li.closex {
+			background: #4A8ECB url('../images/gradients_closeX.png') no-repeat;
+			background-position: bottom right;	
+			border-top-left-radius: 8px;
+			border-top-right-radius: 8px;
+			border-bottom-right-radius: 0px;
+			border-bottom-left-radius: 0px;			
+		}
+		.pearson_modepopup ul li.closex a:hover{
+			background: none;
+		}
+		
+	.pearson_modepopup ul li.last {
+		background: none;
+	}
+	.ui-li-last a:link, .ui-li-last a:active, .ui-li-last a:hover, .ui-li-last a:visited{
+		background-image: none;
+	}
+
+/* -----------------------
+	Buttons
+---------------------- */
+
+.toolbutton 
+{		
+	color: #597386;		
+	font-size: 14pt;
+	font-family: normalFont;
+	font-weight: 500;	
+	text-align: left;	
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+	.toolbutton.disabled
+	{
+		
+		opacity: 0.3;
+	}
+
+.toolbutton a:link, .toolbutton a:active, .toolbutton a:visited{
+	/*
+	background: url('../images/gradients_up.png') repeat-x;
+	background-position: bottom;
+	*/
+	/*box-shadow: inset 0 -10px 20px #C3CDD2; */ /* bkrd gradient: white to light gray */
+	
+	color: #223F82;
+	display: block;
+	
+	text-decoration: none;
+	
+	padding-top: 6px;	
+	padding-left: 100px;
+	padding-top: 16px;
+	padding-bottom: 16px;
+	
+	margin-bottom: 10px;
+	
+	/* Rounded corners: */
+	
+	 -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    border-radius: 10px;
+	
+	border: solid 1px #223F82;
+}
+
+
+#globalbuttons {
+	float: right;
+	margin-top: -60px;
+}
+
+/* Help button: */
+#btnHelp a:link{
+	
+	display: inline-block;
+	text-decoration: none;
+	background: url('../images/help_master.png') no-repeat;
+	background-position: 0px 0px;
+	color: #0067AB;
+	width: 44px;
+	height: 40px;
+	margin-right: 0px;
+}
+#btnHelp a:hover{
+	background: url('../images/help_master.png') no-repeat;	
+	background-position: 0px -40px;
+	color: #0091CF;
+}
+#btnHelp a:active{
+	background: url('../images/help_master.png') no-repeat;
+	background-position: 0px -120px;
+	color: #025F93;
+
+}
+#btnHelp a:visited{
+	color: #0067AB;
+}
+/* Info button (same styling as help - different image */
+#btnInfo a:link{
+	display: inline-block;
+	text-decoration: none;
+	background: url('../images/info_master.png') no-repeat;
+	background-position: 0px 0px;
+	color: #0067AB;
+	width: 44px;
+	height: 40px;
+	margin-right: 0px;
+}
+#btnInfo a:hover{
+	background: url('../images/info_master.png') no-repeat;	
+	background-position: 0px -40px;
+	color: #0091CF;
+}
+#btnInfo a:active{
+	background: url('../images/info_master.png') no-repeat;
+	background-position: 0px -120px;
+	color: #025F93;
+
+}
+#btnInfo a:visited{
+	color: #0067AB;
+}
+
+#btnNumberLine, #btnPlaceValueBlocks, #btnAreaModels, #btnFractionsAndPercents, #btnIntegerChips, 
+#btnAlgebraTiles, #btnPanBalance, #btnCoordinateGrapher, #btnGeometry2d, #btnGeometry3d , 
+#btnDataAndGraphs, #btnGraphicOrganizer , #btnProbability, #btnCalculator {
+	
+	background: white url('../images/gradients_up.png') repeat-x;
+	background-position: bottom;
+	
+	/* Rounded corners: */
+	 -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    border-radius: 10px;
+}
+#btnNumberLine:hover, #btnPlaceValueBlocks:hover, #btnAreaModels:hover, #btnFractionsAndPercents:hover, #btnIntegerChips:hover, 
+#btnAlgebraTiles:hover, #btnPanBalance:hover, #btnCoordinateGrapher:hover, #btnGeometry2d:hover, #btnGeometry3d:hover , 
+#btnDataAndGraphs:hover, #btnGraphicOrganizer:hover , #btnProbability:hover, #btnCalculator:hover{
+	
+	background: #FFFFFF url('../images/gradients_upHovering.png') repeat-x;
+	background-position: bottom;
+	
+	/* Rounded corners: */
+	 -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    border-radius: 10px;
+}
+
+
+
+/* Number Line ========================================================== */
+#btnNumberLine a:link {
+	background: url('../images/icon_NumberLine.png') no-repeat;
+	background-position: 30px;		
+}
+
+/* Place-Value Blocks ========================================================== */
+#btnPlaceValueBlocks a:link {
+	background: url('../images/icon_PVB.png') no-repeat;
+	background-position: 30px;
+}
+
+#btnAreaModels a:link  {
+	background: url('../images/icon_arrays.png') no-repeat;
+	background-position: 30px;
+}
+
+/* Fraction Shapes ========================================================== */
+#btnFractionsAndPercents a:link {
+	background: url('../images/icon_rationalNumbers.png') no-repeat;
+	background-position: 30px;
+}
+#btnIntegerChips  a:link {
+	background: url('../images/icon_chips.png') no-repeat;
+	background-position: 30px;	
+}
+#btnAlgebraTiles  a:link {
+	background: url('../images/icon_algTiles.png') no-repeat;
+	background-position: 30px;	
+}	
+/* Pan Balance ========================================================== */
+#btnPanBalance a:link {
+	background: url('../images/icon_PanBalance.png') no-repeat;
+	background-position: 30px;	
+}	
+#btnCoordinateGrapher  a:link {
+	background: url('../images/icon_coordinateGraph.png') no-repeat;
+	background-position: 30px;	
+}
+#btnGeometry2d a:link {
+	background: url('../images/icon_2d.png') no-repeat;
+	background-position: 30px;	
+}
+#btnGeometry3d a:link  {
+	background: url('../images/icon_3d.png') no-repeat;
+	background-position: 30px;	
+}
+
+#btnDataAndGraphs a:link  {
+	background: url('../images/icon_dataGraph.png') no-repeat;
+	background-position: 30px;	
+}
+
+#btnGraphicOrganizer a:link  {
+	background: url('../images/icon_graphicOrganizers.png') no-repeat;
+	background-position: 30px;	
+}
+
+/* Probability ========================================================== */
+#btnProbability a:link {
+	background: url('../images/icon_Probability.png') no-repeat;
+	background-position: 30px;	
+}
+/* Calculator (Expression) ========================================================== */
+#btnCalculator a:link {
+	background: url('../images/icon_calculator.png') no-repeat;
+	background-position: 30px;	
+}	
+
+
+
+

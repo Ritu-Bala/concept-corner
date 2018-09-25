@@ -1,0 +1,62 @@
+{
+  "grade5": {
+    "menu": {
+      "title": "Math Tools",
+      "flyouts": true
+    },
+    "grid": {
+      "title": "Tools for Math",
+      "flyouts": true
+    },
+    "home": {
+      "title": "Math Tools"
+    },
+    "grades": [
+      "5"
+    ],
+    "tools": {},
+    "filters": [
+      "cc_home_page_add_item",
+      "cc_additional_header_buttons"
+    ]
+  },
+  "geo": {
+    "menu": {
+      "title": "Geometry Tools",
+      "flyouts": true
+    },
+    "grid": {
+      "title": "Tools for Geometry",
+      "flyouts": true
+    },
+    "home": {
+      "title": "Tools for Geometry"
+    },
+    "grades": [
+      "7"
+    ],
+    "tools": {
+      "areamodels": {
+        "title": "",
+        "options": {
+          "1": "Square Numbers &amp; Roots"
+        }
+      },
+      "geometry2d": {
+        "title": "Two Dimensions",
+        "options": {}
+      },
+      "geometry3d": {
+        "title": "",
+        "options": {}
+      },
+      "calculator": {
+        "title": "",
+        "options": {}
+      }
+    },
+    "filters": [
+      "cc_additional_header_buttons"
+    ]
+  }
+}

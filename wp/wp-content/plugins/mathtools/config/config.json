@@ -1,0 +1,1124 @@
+{
+  "slug": "mathtools",
+  "scripts": {
+    "css": {
+      "path": "inc/css",
+      "all": [
+        "fonts.css"
+      ]
+    },
+    "js": {
+      "mathtools": {
+        "mode": "public",
+        "path": "inc/js/mathtools.js",
+        "dependencies": [
+          "jquery"
+        ]
+      },
+      "mathtools-use": {
+        "mode": "admin",
+        "path": "inc/js/mathtools-post-admin.js",
+        "dependencies": [
+          "jquery"
+        ]
+      }
+    }
+  },
+  "templates": {
+    "homeli": [
+      "<li class=\"{{insert_li_class}}\"><a href=\"{{insert_link}}/\" class=\"{{insert_a_class}}\">{{insert_text}}</a></li>"
+    ],
+
+    "menuopen": [
+      "<div class=\"{{menu_div_class}}\">"
+
+    ],
+    "menuclose": [
+      "</div>"
+    ],
+
+    "menubuttontext": [
+      "<a href='#' role='button' aria-haspopup='true' class=\"{{menu_button_class}}\" data-toggle=\"dropdown\">",
+      "{{menu_text}} ",
+      "<i class=\"fa fa-chevron-down\" aria-hidden=\"true\"></i>",
+      "</a>"
+    ],
+    "menubuttonimg": [
+      "<div class=\"{{menu_img_button_class}}\" data-toggle=\"dropdown\" style=\"max-width:{{menu_img_width}}px;max-height:{{menu_img_height}}px;\">",
+      "<img src=\"{{drop_image}}\" alt=\"{{menu_text}}\">",
+      "</div>"
+    ],
+
+    "menuitemsopen": [
+      "<ul class=\"{{menu_ul_class}}\" role=\"menu\">"
+    ],
+    "menuitemsclose": [
+      "</ul>"
+    ],
+
+    "menuitemopen": [
+      "<li class=\"{{menu_tool_li_class}}\" role=\"presentation\">",
+      "<a href=\"#\" class=\"{{menu_tool_a_class}}\" data-dimx=\"{{this_dimx}}\" data-dimy=\"{{this_dimy}}\">"
+    ],
+    "menuitemicon": [
+      "<div class=\"{{menu_tool_icon_class}}\" style=\"max-width:{{this_iconw}}px;max-height:{{this_iconh}}px;\"><img src=\"{{this_icon}}\" alt=\"{{this_title}}\"></div>"
+    ],
+    "menuitem": [
+      "{{this_title}}",
+      "</a>"
+    ],
+    "menuitemclose": [
+      "</li>"
+    ],
+
+    "menusubitemsopen": [
+      "<ul class=\"{{menu_fly_class}}\">"
+    ],
+    "menusubitem": [
+      "<li class=\"{{menu_fly_li_class}}\" role=\"presentation\">",
+      "<a href=\"{{this_href}}\" class=\"{{menu_fly_a_class}}\" data-dimx=\"{{this_dimx}}\" data-dimy=\"{{this_dimy}}\">",
+      "{{this_title}}",
+      "</a>",
+      "</li>"
+    ],
+    "menusubitemsclose": [
+      "</ul>"
+    ],
+
+
+    "gridopen": [
+      "<div class=\"{{grid_class_wrap}}\">"
+    ],
+    "gridclose": [
+      "</div>"
+    ],
+
+    "gridtitle": [
+      "<div class=\"{{grid_class_titlewrap}}\">",
+      "<h1 class=\"{{grid_class_title}}\">{{grid_title}}</h1>",
+      "</div>"
+    ],
+    "griddesc": [
+      "<div class=\"{{grid_class_desc}}\">{{grid_desc}}</div>"
+    ],
+
+    "gridcolopen": [
+      "<div class=\"{{grid_class_column}}\">"
+    ],
+    "gridcolclose": [
+      "</div>"
+    ],
+
+    "griditemopen": [
+      "<div class=\"{{grid_class_tool_wrap}}\" data-basetool=\"{{this_href}}\" data-dimx=\"{{this_dimx}}\" data-dimy=\"{{this_dimy}}\">"
+    ],
+    "griditemicon": [
+      "<div class=\"{{grid_class_tool_iconwrap}}\"><img src=\"{{this_icon}}\"></div>"
+    ],
+
+    "griditem": [
+      "<div class=\"{{grid_class_tool_textwrap}}\">",
+      "<h3>{{this_title}}</h3>",
+      "{{this_desc}}"
+    ],
+    "griditemclose": [
+      "</div></div>"
+    ],
+
+    "gridbuttonitem": [
+      "<a href=\"{{this_href}}\" class=\"{{grid_class_tool_optbutton}}\" data-dimx=\"{{this_dimx}}\" data-dimy=\"{{this_dimy}}\">{{this_title}}</a>"
+    ]
+
+  },
+  "posts": [
+    {
+      "id": "mathtoolsets",
+      "wp": {
+        "label": "Math Tools",
+        "labels": {
+          "name": "Math Tools",
+          "singular_name": "Math Toolset",
+          "menu_name": "Math Toolsets",
+          "name_admin_bar": "Math Toolsets",
+          "add_new": "Add New",
+          "add_new_item": "Add New Toolset",
+          "new_item": "New Toolset",
+          "edit_item": "Edit Toolset",
+          "view_item": "View Toolset",
+          "all_items": "All Toolsets",
+          "search_items": "Search Toolsets",
+          "parent_item_colon": "Parent Toolset",
+          "not_found": "No sets found.",
+          "not_found_in_trash": "No sets found in Trash."
+        },
+        "description": "",
+        "public": true,
+        "exclude_from_search": true,
+        "publicly_queryable": true,
+        "show_ui": true,
+        "show_in_nav_menus": true,
+        "show_in_menu": true,
+        "show_in_admin_bar": false,
+        "menu_position": 20,
+        "menu_icon": "dashicons-chart-area",
+        "capability_type": "post",
+        "hierarchical": false,
+        "taxonomies": [
+          "cc_grade"
+        ],
+        "has_archive": false,
+        "supports": [
+          "title"
+        ],
+        "query_var": "mathtool"
+      },
+      "opts": true
+    }
+  ],
+  "shortcodes": [
+    {
+      "code": "mathtools",
+      "atts": {
+        "id": "",
+        "type": [
+          "grid",
+          "menu",
+          "link"
+        ],
+        "tool": "",
+        "grade": {
+          "global": "cc_current_grade",
+          "key": "name"
+        }
+      }
+    }
+  ],
+  "filters": [
+    {
+      "id": "cc_home_page_add_item"
+    },
+    {
+      "id": "cc_additional_header_buttons"
+    },
+    {
+      "id": "cc_page_title"
+    }
+  ],
+  "optionstitle": "Math Tools Options",
+  "options": {
+    "title": "Math Tools Options",
+    "tabs": [
+      {
+        "id": "display",
+        "title": "Display",
+        "desc": "<p>These options can be overriden by individual sets, but will be used as defaults.</p>",
+        "boxes": [
+          "menu_options",
+          "grid_options",
+          "insert_options"
+        ]
+      },
+      {
+        "id": "tools",
+        "title": "Tools",
+        "desc": "<p>General options...these can be overridden by specific toolsets.</p>",
+        "boxes": []
+      },
+      {
+        "id": "classes",
+        "title": "Classes",
+        "desc": "<p>Classes added to the markup.</p>",
+        "boxes": [
+          "menuclasses_options",
+          "gridclasses_options",
+          "insertclasses_options"
+        ]
+      },
+      {
+        "id": "other",
+        "title": "CSS/JS/Filters",
+        "desc": "<p>Add custom code and WP or theme filters.</p>",
+        "boxes": [
+          "cssjs_options",
+          "filters_options"
+        ]
+      }
+    ]
+  },
+  "boxes": {
+    "where": {
+      "id": "where",
+      "title": "Add Via Filter?",
+      "object_types": [
+        "mathtoolsets"
+      ],
+      "fields": [
+        "fields.via_filter",
+        "fields.filter_select"
+      ]
+    },
+    "menu": {
+      "id": "menu",
+      "title": "Menu Configuration",
+      "object_types": [
+        "mathtoolsets"
+      ],
+      "fields": [
+        "fields.menu_use",
+        "fields.menu_text",
+        "fields.menu_img",
+        "fields.menu_imgfile",
+        "fields.menu_img_height",
+        "fields.menu_img_width",
+        "fields.menu_flyout",
+        "fields.menu_icon_height",
+        "fields.menu_icon_width"
+      ]
+    },
+    "menu_options": {
+      "id": "menu_options",
+      "title": "Menu Configuration",
+      "show_on": {
+        "key": "options-page",
+        "value": [
+          "mathtoolsets_options"
+        ]
+      },
+      "hookup": false,
+      "fields": [
+        "fields.menu_text",
+        "fields.menu_img",
+        "fields.menu_imgfile",
+        "fields.menu_img_height",
+        "fields.menu_img_width",
+        "fields.menu_flyout",
+        "fields.menu_icon_height",
+        "fields.menu_icon_width"
+      ]
+    },
+    "menuclasses_options": {
+      "id": "menuclasses_options",
+      "title": "Menu Classes",
+      "show_on": {
+        "key": "options-page",
+        "value": [
+          "mathtoolsets_options"
+        ]
+      },
+      "hookup": false,
+      "fields": [
+        "fields.menu_div_class",
+        "fields.menu_button_class",
+        "fields.menu_img_button_class",
+        "fields.menu_ul_class",
+        "fields.menu_tool_li_class",
+        "fields.menu_tool_a_class",
+        "fields.menu_tool_icon_class",
+        "fields.menu_fly_class",
+        "fields.menu_fly_li_class",
+        "fields.menu_fly_a_class"
+      ]
+    },
+    "grid": {
+      "id": "grid",
+      "title": "Grid Configuration",
+      "object_types": [
+        "mathtoolsets"
+      ],
+      "fields": [
+        "fields.grid_use",
+        "fields.grid_title",
+        "fields.grid_title_aspage",
+        "fields.grid_desc",
+        "fields.grid_page",
+        "fields.grid_cols",
+        "fields.grid_tool_height",
+        "fields.grid_tool_icons",
+        "fields.grid_tool_desc",
+        "fields.grid_tool_opts"
+      ]
+    },
+    "grid_options": {
+      "id": "grid_options",
+      "title": "Grid Configuration",
+      "show_on": {
+        "key": "options-page",
+        "value": [
+          "mathtoolsets_options"
+        ]
+      },
+      "hookup": false,
+      "fields": [
+        "fields.grid_title",
+        "fields.grid_title_aspage",
+        "fields.grid_desc",
+        "fields.grid_page",
+        "fields.grid_cols",
+        "fields.grid_tool_height",
+        "fields.grid_tool_icons",
+        "fields.grid_tool_desc",
+        "fields.grid_tool_opts"
+      ]
+    },
+    "gridclasses_options": {
+      "id": "gridclasses_options",
+      "title": "Grid Classes",
+      "show_on": {
+        "key": "options-page",
+        "value": [
+          "mathtoolsets_options"
+        ]
+      },
+      "hookup": false,
+      "fields": [
+        "fields.grid_class_wrap",
+        "fields.grid_class_titlewrap",
+        "fields.grid_class_title",
+        "fields.grid_class_desc",
+        "fields.grid_class_column",
+        "fields.grid_class_tool_wrap",
+        "fields.grid_class_tool_iconwrap",
+        "fields.grid_class_tool_textwrap",
+        "fields.grid_class_tool_optbutton",
+        "fields.grid_class_tool_flytrig",
+        "fields.grid_class_tool_flyul",
+        "fields.grid_class_tool_flyli",
+        "fields.grid_class_tool_flya"
+      ]
+    },
+    "insert": {
+      "id": "insert",
+      "title": "Insert into Existing Menu",
+      "object_types": [
+        "mathtoolsets"
+      ],
+      "fields": [
+        "fields.insert_use",
+        "fields.insert_text",
+        "fields.insert_link"
+      ]
+    },
+    "insert_options": {
+      "id": "insert_options",
+      "title": "Insert into Existing Menu",
+      "show_on": {
+        "key": "options-page",
+        "value": [
+          "mathtoolsets_options"
+        ]
+      },
+      "hookup": false,
+      "fields": [
+        "fields.insert_text",
+        "fields.insert_link"
+      ]
+    },
+    "insertclasses_options": {
+      "id": "insertclasses_options",
+      "title": "Insert Classes",
+      "show_on": {
+        "key": "options-page",
+        "value": [
+          "mathtoolsets_options"
+        ]
+      },
+      "hookup": false,
+      "fields": [
+        "fields.insert_li_class",
+        "fields.insert_a_class"
+      ]
+    },
+    "cssjs_options": {
+      "id": "cssjs_options",
+      "title": "CSS/JS",
+      "show_on": {
+        "key": "options-page",
+        "value": [
+          "mathtoolsets_options"
+        ]
+      },
+      "hookup": false,
+      "fields": [
+        "fields.code_css",
+        "fields.code_js"
+      ]
+    },
+    "filters_options": {
+      "id": "filters_options",
+      "title": "Filters",
+      "show_on": {
+        "key": "options-page",
+        "value": [
+          "mathtoolsets_options"
+        ]
+      },
+      "hookup": false,
+      "fields": [
+        "fields.mathtoolsets_filter"
+      ]
+    }
+  },
+  "fields": [
+    {
+      "name": "Filters",
+      "desc": "Choose how to handle filters. This toolset can always be added via shortcode.",
+      "id": "via_filter",
+      "default": "opts",
+      "type": "radio",
+      "show_on": [
+        "mathtoolsets"
+      ],
+      "options": {
+        "opts": "Use filters set in math tools options",
+        "never": "Don't use filters",
+        "custom": "Use only the filters selected below"
+      },
+      "row_classes": "opt-use",
+      "attributes": {
+        "data-use": "opt-use-filters",
+        "data-radio": "custom"
+      }
+    },
+    {
+      "name": "Choose Filters",
+      "desc": "The above filters were configured in Math Tools Options",
+      "id": "filter_select",
+      "row_classes": "opt-use-filters",
+      "type": "multicheck",
+      "show_on": [
+        "mathtoolsets"
+      ],
+      "options_cb": [
+        "Mathtools",
+        "cmb_render_filters"
+      ]
+    },
+
+    {
+      "id": "mathtoolsets_filter",
+      "type": "group",
+      "options": {
+        "group_title": "Filter {#}",
+        "add_button": "Add Another Filter",
+        "remove_button": "Remove Filter",
+        "sortable": true
+      },
+      "fields": [
+        "fields.filter_name",
+        "fields.filter_call",
+        "fields.filter_function",
+        "fields.filter_priority",
+        "fields.filter_params"
+      ]
+    },
+    {
+      "name": "Filter Name",
+      "desc": "Friendly name for your filter",
+      "id": "filter_name",
+      "type": "text"
+    },
+    {
+      "name": "Machine ID",
+      "desc": "The filter id from your theme or Wordpress",
+      "id": "filter_call",
+      "type": "text"
+    },
+    {
+      "name": "Insert Format",
+      "desc": "What would you like to insert?",
+      "id": "filter_function",
+      "type": "select",
+      "show_option_none": true,
+      "options": {
+        "filter_menu": "Add menu button",
+        "filter_grid": "Add grid",
+        "filter_item": "Add as menu item",
+        "filter_title": "Alter page title"
+      }
+    },
+    {
+      "name": "Priority",
+      "desc": "The filter id from your theme or Wordpress",
+      "id": "filter_priority",
+      "type": "text_small",
+      "default": "10"
+    },
+    {
+      "name": "Additional Parameters",
+      "desc": "If the filter sends parameters, list their names here, seperated by commas",
+      "id": "filter_params",
+      "type": "text"
+    },
+    {
+      "name": "Ignore Defaults",
+      "desc": "Use custom settings instead of those set in 'Math Tools Options'",
+      "id": "menu_use",
+      "type": "checkbox",
+      "row_classes": "opt-use",
+      "show_on": [
+        "mathtoolsets"
+      ],
+      "attributes": {
+        "data-use": "opt-use-menu"
+      }
+    },
+    {
+      "name": "Drop Menu Button Text",
+      "desc": "Appears on menu or button which shows the tools.",
+      "id": "menu_text",
+      "default": "Math Tools",
+      "type": "text",
+      "row_classes": "opt-use-menu"
+    },
+    {
+      "name": "Use an Image for the Menu Button",
+      "desc": "",
+      "id": "menu_img",
+      "type": "radio",
+      "default": "none",
+      "options": {
+        "use": "Use Image",
+        "none": "Do Not Use Image"
+      },
+      "row_classes": "opt-use-menu"
+    },
+    {
+      "name": "Menu Button Image",
+      "desc": "Choose an image to use for the button",
+      "id": "menu_imgfile",
+      "type": "file",
+      "row_classes": "opt-use-menu"
+    },
+    {
+      "name": "Menu Button Image Max Height",
+      "desc": "If using an image as button, max height",
+      "id": "menu_img_height",
+      "default": "50",
+      "type": "text_small",
+      "row_classes": "opt-use-menu"
+    },
+    {
+      "name": "Menu Button Image Max Width",
+      "desc": "If using an image as button, max width",
+      "id": "menu_img_width",
+      "default": "50",
+      "type": "text_small",
+      "row_classes": "opt-use-menu"
+    },
+    {
+      "name": "Menu Item Icon Max Height",
+      "desc": "If an icon appears on the dropdown menu, max height",
+      "id": "menu_icon_height",
+      "default": "30",
+      "type": "text_small",
+      "row_classes": "opt-use-menu"
+    },
+    {
+      "name": "Menu Item Icon Max Width",
+      "desc": "If an icon appears on the dropdown menu, max width",
+      "id": "menu_icon_width",
+      "default": "30",
+      "type": "text_small",
+      "row_classes": "opt-use-menu"
+    },
+    {
+      "name": "Options Flyouts",
+      "desc": "If a tool has options, show them in flyout.",
+      "id": "menu_flyout",
+      "default": "show",
+      "type": "radio",
+      "options": {
+        "show": "Show",
+        "hide": "Hide"
+      },
+      "row_classes": "opt-use-menu"
+    },
+
+    {
+      "name": "Wrapper",
+      "desc": "<code>&lt;div&gt;</code>",
+      "id": "menu_div_class",
+      "type": "text_medium",
+      "default": ""
+    },
+    {
+      "name": "Text Button",
+      "desc": "<code>&lt;button&gt;</code>",
+      "id": "menu_button_class",
+      "type": "text_medium",
+      "default": ""
+    },
+    {
+      "name": "Image Button",
+      "desc": "<code>&lt;div&gt;</code>",
+      "id": "menu_img_button_class",
+      "type": "text_medium",
+      "default": ""
+    },
+    {
+      "name": "Menu Wrapper",
+      "desc": "<code>&lt;ul&gt;</code>",
+      "id": "menu_ul_class",
+      "type": "text_medium",
+      "default": ""
+    },
+    {
+      "name": "Tool (menu item)",
+      "desc": "<code>&lt;li&gt;</code>",
+      "id": "menu_tool_li_class",
+      "type": "text_medium",
+      "default": ""
+    },
+    {
+      "name": "Tool Icon Wrap",
+      "desc": "<code>&lt;div&gt;</code>",
+      "id": "menu_tool_icon_class",
+      "type": "text_medium",
+      "default": ""
+    },
+    {
+      "name":  "Tool Link",
+      "desc": "<code>&lt;a&gt;</code>",
+      "id": "menu_tool_a_class",
+      "type": "text_medium",
+      "default": ""
+    },
+    {
+      "name":  "Flyout",
+      "desc": "<code>&lt;ul&gt;</code>",
+      "id": "menu_fly_class",
+      "type": "text_medium",
+      "default": ""
+    },
+    {
+      "name":  "Option Item",
+      "desc": "<code>&lt;li&gt;</code>",
+      "id": "menu_fly_li_class",
+      "type": "text_medium",
+      "default": ""
+    },
+    {
+      "name":  "Option Item Link",
+      "desc": "<code>&lt;a&gt;</code>",
+      "id": "menu_fly_a_class",
+      "type": "text_medium",
+      "default": ""
+    },
+
+    {
+      "name": "Ignore Defaults",
+      "desc": "Use custom settings instead of those set in 'Math Tools Options'",
+      "id": "grid_use",
+      "type": "checkbox",
+      "row_classes": "opt-use",
+      "show_on": [
+        "mathtoolsets"
+      ],
+      "attributes": {
+        "data-use": "opt-use-grid"
+      }
+    },
+    {
+      "name":  "Title",
+      "desc": "Appears above grid.",
+      "id": "grid_title",
+      "default": "",
+      "type": "text",
+      "row_classes": "opt-use-grid"
+    },
+    {
+      "name": "Use as Page Title",
+      "desc": "If you do not use as page title, will be shown above grid.",
+      "id": "grid_title_aspage",
+      "type": "radio",
+      "default": "yes",
+      "options": {
+        "yes": "Use as page title",
+        "no": "Don't use as page title"
+      },
+      "row_classes": "opt-use-grid"
+    },
+    {
+      "name":  "Description",
+      "desc": "Added below title.",
+      "id": "grid_desc",
+      "type": "wysiwyg",
+      "row_classes": "opt-use-grid",
+      "options": {
+        "textarea_rows": 5
+      }
+    },
+    {
+      "name": "Grid Page",
+      "desc": "Page used as the basis for displaying the grid.",
+      "id": "grid_page",
+      "default": "",
+      "type": "select",
+      "options": "MathTools::page_select",
+      "row_classes": "opt-use-grid"
+    },
+    {
+      "name":  "Columns",
+      "desc": "Be sure to adjust your column class(es) if necessary",
+      "id": "grid_cols",
+      "default": "3",
+      "type": "text_small",
+      "row_classes": "opt-use-grid"
+    },
+    {
+      "name": "Tools: Height",
+      "desc": "Set all tools to the height of tallest tool?",
+      "id": "grid_tool_height",
+      "default": "fixed",
+      "type": "radio",
+      "options": {
+        "fixed": "Fixed Height",
+        "vary": "Auto Height"
+      },
+      "row_classes": "opt-use-grid"
+    },
+    {
+      "name": "Tools: Icons",
+      "desc": "Display the tool icon, if present? This overrides all general options, but can be overriden by specific tools.",
+      "id": "grid_tool_icons",
+      "default": "show",
+      "type": "radio",
+      "options": {
+        "show": "Show",
+        "hide": "Hide"
+      },
+      "row_classes": "opt-use-grid"
+    },
+    {
+      "name": "Tools: Descriptions",
+      "desc": "Display the tool description, if present?",
+      "id": "grid_tool_desc",
+      "default": "",
+      "type": "radio",
+      "options": {
+        "show": "Show",
+        "hide": "Hide"
+      },
+      "row_classes": "opt-use-grid"
+    },
+    {
+      "name": "Tools: Options Display",
+      "desc": "If a tool has options, display as above.",
+      "id": "grid_tool_opts",
+      "default": "buttons",
+      "type": "radio",
+      "options": {
+        "hide": "Hide",
+        "buttons": "Buttons",
+        "menuclick": "Pop-up menu on click"
+      },
+      "row_classes": "opt-use-grid"
+    },
+
+    {
+      "name":  "Wrapper",
+      "desc": "<code>&lt;div&gt;</code>",
+      "id": "grid_class_wrap",
+      "default": "",
+      "type": "text_medium"
+    },
+    {
+      "name":  "Title Wrap",
+      "desc": "<code>&lt;div&gt;</code>",
+      "id": "grid_class_titlewrap",
+      "default": "",
+      "type": "text_medium"
+    },
+    {
+      "name":  "Title",
+      "desc": "<code>&lt;h1&gt;</code>",
+      "id": "grid_class_title",
+      "default": "",
+      "type": "text_medium"
+    },
+    {
+      "name":  "Desc",
+      "desc": "<code>&lt;div&gt;</code>",
+      "id": "grid_class_desc",
+      "default": "",
+      "type": "text_medium"
+    },
+    {
+      "name":  "Column",
+      "desc": "<code>&lt;div&gt;</code>",
+      "id": "grid_class_column",
+      "default": "",
+      "type": "text_medium"
+    },
+    {
+      "name":  "Tool Wrapper",
+      "desc": "<code>&lt;div&gt;</code>",
+      "id": "grid_class_tool_wrap",
+      "default": "",
+      "type": "text_medium"
+    },
+    {
+      "name":  "Tool Icon Wrap",
+      "desc": "<code>&lt;div&gt;</code>",
+      "id": "grid_class_tool_iconwrap",
+      "default": "",
+      "type": "text_medium"
+    },
+    {
+      "name":  "Tool Text Wrap",
+      "desc": "<code>&lt;div&gt;</code>",
+      "id": "grid_class_tool_textwrap",
+      "default": "",
+      "type": "text_medium"
+    },
+    {
+      "name":  "Tool Options Button",
+      "desc": "<code>&lt;a&gt;</code>",
+      "id": "grid_class_tool_optbutton",
+      "default": "",
+      "type": "text_medium"
+    },
+    {
+      "name":  "Flyout Trigger",
+      "desc": "<code>&lt;a&gt;</code>",
+      "id": "grid_class_tool_flytrig",
+      "default": "",
+      "type": "text_medium"
+    },
+    {
+      "name":  "Flyout Options Wrap",
+      "desc": "<code>&lt;ul&gt;</code>",
+      "id": "grid_class_tool_flyul",
+      "default": "",
+      "type": "text_medium"
+    },
+    {
+      "name":  "Flyout Options Item",
+      "desc": "<code>&lt;li&gt;</code>",
+      "id": "grid_class_tool_flyli",
+      "default": "",
+      "type": "text_medium"
+    },
+    {
+      "name":  "Flyout Options Link",
+      "desc": "<code>&lt;a&gt;</code>",
+      "id": "grid_class_tool_flya",
+      "default": "",
+      "type": "text_medium"
+    },
+
+    {
+      "name": "Ignore Defaults",
+      "desc": "Use custom settings instead of those set in 'Math Tools Options'",
+      "id": "insert_use",
+      "type": "checkbox",
+      "row_classes": "opt-use",
+      "show_on": [
+        "mathtoolsets"
+      ],
+      "attributes": {
+        "data-use": "opt-use-insert"
+      }
+    },
+    {
+      "name": "Menu Text",
+      "desc": "",
+      "id": "insert_text",
+      "default": "",
+      "type": "text_medium",
+      "row_classes": "opt-use-insert"
+    },
+    {
+      "name":  "Link",
+      "desc": "You can use {{grade}} or {{page}} as placeholders.",
+      "id": "insert_link",
+      "default": "",
+      "type": "text",
+      "row_classes": "opt-use-insert"
+    },
+
+    {
+      "name":  "Item",
+      "desc": "<code>&lt;li&gt;</code>",
+      "id": "insert_li_class",
+      "default": "",
+      "type": "text_medium"
+    },
+    {
+      "name":  "Link",
+      "desc": "<code>&lt;a&gt;</code>",
+      "id": "insert_a_class",
+      "default": "",
+      "type": "text_medium"
+    },
+
+    {
+      "name":  "CSS",
+      "desc": "Note, your theme may already handle this.",
+      "id": "code_css",
+      "type": "textarea_code"
+    },
+    {
+      "name":  "Javascript",
+      "desc": "This needs to conform to general WP 'rules' about added JS.",
+      "id": "code_js",
+      "type": "textarea_code"
+    },
+
+    {
+      "name": "Use this tool?",
+      "desc": "Tool options",
+      "id": "tool_use",
+      "default": "opts",
+      "type": "radio",
+      "show_on": [
+        "mathtoolsets"
+      ],
+      "options": {
+        "opts": "Use the tool as configured in options",
+        "never": "Don't show this tool",
+        "custom": "Customize tool for this toolset"
+      },
+      "row_classes": "opt-use",
+      "attributes": {
+        "data-use": "opt-use-tool-",
+        "data-radio": "custom"
+      }
+    },
+    {
+      "name":  "Tool Title",
+      "desc": "Title when tool is shown in menu or grid",
+      "id": "tool_title",
+      "type": "text_medium",
+      "row_classes": "opt-use-tool-"
+    },
+    {
+      "name":  "Tool Icon in Menu",
+      "desc": "Show the icon in the tool menu",
+      "id": "tool_menu_icon",
+      "default": "opts",
+      "type": "radio",
+      "options": {
+        "opts": "Use the general options",
+        "use": "Show Icon",
+        "hide": "Hide Icon"
+      },
+      "row_classes": "opt-use-tool-"
+    },
+    {
+      "name": "Tool Description",
+      "desc": "Change the tool title from the default",
+      "id": "tool_desc",
+      "type": "wysiwyg",
+      "row_classes": "opt-use-tool-",
+      "options": {
+        "textarea_rows": 3
+      }
+    },
+    {
+      "name": "Tool Icon Display",
+      "desc": "",
+      "id": "tool_iconshow",
+      "type": "radio",
+      "default": "def",
+      "options": {
+        "def": "Show default icon",
+        "custom": "Show custom icon",
+        "hide": "Hide icon"
+      },
+      "row_classes": "opt-use-tool-"
+    },
+    {
+      "name": "Tool Icon",
+      "desc": "Change the tool title from the default",
+      "id": "tool_iconfile",
+      "type": "file",
+      "row_classes": "opt-use-tool-"
+    },
+    {
+      "name": "Tool Order",
+      "desc": "Order tool will be shown",
+      "id": "tool_order",
+      "type": "text_small",
+      "row_classes": "opt-use-tool-"
+    },
+    {
+      "name": "Tool Options",
+      "desc": "This tool can be launched in different ways. If you have 'flyouts' enabled, the options below will be shown in that menu. Note changes here do not change the language in the launched tool, nor the availability of the options within the tool.",
+      "id": "toolopt_x",
+      "tooloptflag": true,
+      "type": "title",
+      "row_classes": "opt-use-tool-"
+    },
+    {
+      "name": "Tool Option Title",
+      "desc": "Title shown to users.",
+      "id": "toolopt_title",
+      "type": "text",
+      "tooloptflag": true,
+      "default": "",
+      "row_classes": "opt-use-tool-"
+    },
+    {
+      "name": "Show/Hide Option",
+      "desc": "Check to show option",
+      "id": "toolopt_use",
+      "type": "checkbox",
+      "tooloptflag": true,
+      "default": 1,
+      "row_classes": "opt-use-tool-"
+    }
+  ],
+  "options_cb": {
+    "filter_select": {
+      "source": {
+        "call": "get_option",
+        "params": "mathtoolsets_options",
+        "key": [
+          "mathtoolsets_filter"
+        ]
+      }
+    }
+  },
+  "assign": {
+    "mathtoolsets": [
+      "boxes.where",
+      "boxes.menu",
+      "boxes.menu_options",
+      "boxes.menuclasses_options",
+      "boxes.grid",
+      "boxes.grid_options",
+      "boxes.gridclasses_options",
+      "boxes.insert",
+      "boxes.insert_options",
+      "boxes.insertclasses_options",
+      "boxes.cssjs_options",
+      "boxes.filters_options",
+      "tools"
+    ],
+    "tools": [
+      "fields.tool_use",
+      "fields.tool_title",
+      "fields.tool_desc",
+      "fields.tool_order",
+      "fields.tool_iconshow",
+      "fields.tool_iconfile",
+      "fields.tool_menu_icon"
+    ],
+    "tools_options": [
+      "fields.tool_title",
+      "fields.tool_desc",
+      "fields.tool_order",
+      "fields.tool_iconshow",
+      "fields.tool_iconfile",
+      "fields.tool_menu_icon"
+    ],
+    "toolopts_title": [
+      "fields.toolopt_x"
+    ],
+    "toolopts": [
+      "fields.toolopt_title",
+      "fields.toolopt_use"
+    ]
+  }
+}

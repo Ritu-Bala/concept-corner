@@ -1,0 +1,25 @@
+.mathtools-noscript {
+    width: 22em;
+    position: absolute;
+    left: 50%;
+    margin-left: -11em;
+    color: red;
+    background-color: white;
+    border: 1px solid red;
+    padding: 4px;
+    font-family: sans-serif;
+}
+.mathtools-container {
+    font-family:normalFont, sans-serif;
+}
+.mathtools-font-preload {
+    font-family: normalFont, sans-serif;
+    position:absolute;
+    height:0;
+    width:0;
+    overflow:hidden;
+    clip:rect(0 0 0 0);
+    margin:-1px;
+    padding:0;
+    border:0;
+}

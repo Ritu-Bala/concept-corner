@@ -1,0 +1,128 @@
+{
+  "cc" : {
+    "vtt": {
+      "_eng" : {
+        "label": "English",
+        "locales": [
+          "en",
+          "en_US"
+        ]
+      },
+      "_spa" : {
+        "label": "Espanol",
+        "locales": [
+          "es"
+        ]
+      }
+    },
+    "srt": {
+      "_eng" : {
+        "label": "English",
+        "locales": [
+          "en",
+          "en_US"
+        ]
+      },
+      "_spa" : {
+        "label": "Espanol",
+        "locales": [
+          "es"
+        ]
+      }
+    }
+  },
+  "css": [
+    {
+      "handle": "jwp-css",
+      "src": "{{ccjwpurl}}{{jwpdir}}{{jwpskin}}",
+      "dep": [],
+      "ver": false,
+      "media": "screen"
+    }
+  ],
+  "js": [
+    {
+      "handle": "jwp-js",
+      "src": "{{ccjwpurl}}{{jwpdir}}{{jwpjs}}",
+      "dep": [ "jquery" ],
+      "ver": false,
+      "foot": true
+    },
+    {
+      "handle": "ccjwp-js",
+      "src": "{{ccjwpurl}}js/ccjwp.js",
+      "dep": [ "jwp-js" ],
+      "ver": "{{version}}",
+      "foot": true
+    }
+  ],
+  "player": "7",
+  "s3": {
+    "bucket": "ccsoc.cc",
+    "path": "media",
+    "accesskey": "AKIAJEBNHWY5KVECUSIQ",
+    "secretkey": "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"
+  },
+  "shortcodes": [
+    {
+      "code": "jwplayer",
+      "call": [
+        "Cc_Jwp",
+        "player"
+      ]
+    },
+    {
+      "code": "jwp",
+      "call": [
+        "Cc_Jwp",
+        "player"
+      ]
+    }
+  ],
+  "shortcode_atts": {
+    "cc": true,
+    "cclocale": true,
+    "ccfiles": [],
+    "mediaid": "",
+    "poster": true,
+    "returnjs": true,
+    "template": "inline"
+  },
+  "templates": {
+    "inline": [
+      "<div id=\"{{jwpid}}\" class=\"cc-jwplayer\">Loading Video</div>"
+    ]
+  },
+  "tokens": {
+    "p": [
+      "cfg",
+      "p"
+    ],
+    "currenturl": [
+      "current_url"
+    ],
+    "ccjwpurl": [
+      "ccjwp_url"
+    ],
+    "jwpid": [
+      "atts",
+      "ccjwp.id"
+    ],
+    "jwpdir": [
+      "cfg",
+      "{{p}}.dir"
+    ],
+    "jwpjs": [
+      "cfg",
+      "{{p}}.js"
+    ],
+    "jwpskin": [
+      "cfg",
+      "{{p}}.skin"
+    ],
+    "version": [
+      "cfg",
+      "version"
+    ]
+  }
+}

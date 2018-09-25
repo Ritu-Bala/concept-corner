@@ -1,0 +1,124 @@
+{
+  "general-master": {
+    "id": "general-master",
+    "title": "Features On/Off",
+    "desc": "{{text tab-general-master}}",
+    "boxes": [
+      "psso_gen",
+      "psso_login",
+      "psso_toke"
+    ]
+  },
+  "general-exp": {
+    "id": "general-exp",
+    "title": "Experimental Features",
+    "desc": "{{text tab-general-exp}}",
+    "boxes": [
+      "psso_exp"
+    ]
+  },
+  "user-gen": {
+    "id": "user-gen",
+    "title": "Identification",
+    "desc": "{{text tab-user-gen}}",
+    "boxes": [
+      "psso_usergen"
+    ]
+  },
+  "user-roles": {
+    "id": "user-roles",
+    "title": "Roles",
+    "desc": "{{text tab-user-roles}}",
+    "boxes": [
+      "psso_userroles"
+    ]
+  },
+  "user-errors": {
+    "id": "user-errors",
+    "title": "Errors",
+    "desc": "{{text tab-user-errors}}",
+    "boxes": [
+      "psso_usererrors"
+    ]
+  },
+  "user-protect": {
+    "id": "user-protect",
+    "title": "Protected Users",
+    "desc": "{{text tab-user-protect}}",
+    "boxes": [
+      "psso_userprotect"
+    ]
+  },
+  "pay-url": {
+    "id": "pay-url",
+    "title": "Arrival URL",
+    "desc": "{{text tab-pay-url}}",
+    "boxes": [
+      "psso_payurl"
+    ]
+  },
+  "pay-vars": {
+    "id": "pay-vars",
+    "title": "Variables",
+    "desc": "{{text tab-pay-vars}}",
+    "boxes": [
+      "psso_payvars",
+      "psso_xvars"
+    ]
+  },
+  "pay-cookie": {
+    "id": "pay-cookie",
+    "title": "Set Cookies",
+    "desc": "{{text tab-pay-cookie}}",
+    "boxes": [
+      "psso_paycook"
+    ]
+  },
+  "pay-rule": {
+    "id": "pay-rule",
+    "title": "Routing Rules",
+    "desc": "{{text tab-pay-rule}}",
+    "boxes": [
+      "psso_payrule"
+    ]
+  },
+  "cry-de": {
+    "id": "cry-de",
+    "title": "Decryption",
+    "desc": "{{text tab-cry-de}}",
+    "boxes": [
+      "psso_cryde"
+    ]
+  },
+  "cry-en": {
+    "id": "cry-en",
+    "title": "Encryption",
+    "desc": "{{text tab-cry-en}}",
+    "boxes": []
+  },
+  "track-setup": {
+    "id": "track-setup",
+    "title": "Track Configuration",
+    "desc": "{{text tab-track-setup}}",
+    "boxes": [
+      "psso_trackvar",
+      "psso_trackrule"
+    ]
+  },
+  "track-districts": {
+    "id": "track-districts",
+    "title": "Districts",
+    "desc": "{{text tab-track-districts}}",
+    "boxes": [
+      "psso_trackdist"
+    ]
+  },
+  "track-filler": {
+    "id": "track-filler",
+    "title": "Placeholders",
+    "desc": "{{text tab-track-filler}}",
+    "boxes": [
+      "psso_trackfill"
+    ]
+  }
+}

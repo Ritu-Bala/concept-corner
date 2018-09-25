@@ -1,0 +1,115 @@
+{
+  "dir": "jwp/jwplayer-7.4.2/",
+  "js": "jwplayer.js",
+  "skin": "skins/seven.css",
+  "options": {
+    "key": "VqgY6HYDvALVTJ2N1oxHTxAil9dLYrN6q72F4A==",
+    "file": "",
+    "image": "",
+    "aspectratio": "16:9",
+    "width": "100%",
+    "abouttext": "",
+    "aboutlink": ""
+  },
+  "defaults": {
+    "file": "",
+    "image": "",
+    "title": "",
+    "description": "",
+    "mute": false,
+    "autostart": false,
+    "repeat": false,
+    "abouttext": "",
+    "aboutlink": "https://www.jwplayer.com/learn-more",
+    "controls": true,
+    "aspectratio": "",
+    "height": 270,
+    "width": 480,
+    "visualplaylist": true,
+    "displaytitle": true,
+    "displaydescription": true,
+    "stretching": "uniform",
+    "hlshtml": false,
+    "primary": "html5",
+    "flashplayer": "/",
+    "base": "/",
+    "preload": "",
+    "playlist": {},
+    "skin": {
+      "name": "seven",
+      "active": "#ff0046",
+      "inactive": "#ffffff",
+      "background": "#000000",
+      "url": ""
+    },
+    "captions": {
+      "color": "#ffffff",
+      "fontSize": 15,
+      "fontFamily": "sans",
+      "fontOpacity": 100,
+      "backgroundColor": "#000000",
+      "backgroundOpacity": 75,
+      "edgeStyle": "none",
+      "windowColor": "#000000",
+      "windowOpacity": 0
+    },
+    "rtmp": {
+      "bufferlength": 3,
+      "subscribe": false,
+      "securetoken": ""
+    },
+    "logo": {
+      "file": "",
+      "hide": false,
+      "link": "",
+      "margin": 8,
+      "position": "top-right"
+    },
+    "sharing": {
+      "link": "{{currenturl}}",
+      "code": "",
+      "heading": "Share Video",
+      "sites": [
+        "facebook",
+        "twitter",
+        "email"
+      ]
+    },
+    "ga": {
+      "label": "file"
+    },
+    "related": {
+      "file": "",
+      "onclick": "link",
+      "oncomplete": "show",
+      "heading": "Related Videos",
+      "autoplaytimer": 10,
+      "autoplaymessage": "__title__ will play in xx seconds"
+    },
+    "advertising": {
+      "client": "",
+      "tag": "",
+      "admessage": "The ad will end in xx seconds",
+      "skipoffset": 0,
+      "cuetext": "Advertisement",
+      "skipmessage": "Skip ad in xx",
+      "skiptext": "Skip",
+      "vpaidmode": "disabled",
+      "schedule": "",
+      "companiondiv": []
+    },
+    "drm": {
+      "playready": {
+        "url": "",
+        "customData": ""
+      },
+      "widevine": {
+        "url": "",
+        "customData": ""
+      },
+      "clearkey": {
+        "key": ""
+      }
+    }
+  }
+}

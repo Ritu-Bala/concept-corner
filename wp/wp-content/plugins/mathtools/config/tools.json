@@ -1,0 +1,701 @@
+{
+  "numberline": {
+    "title": "Number Line",
+    "tool_icon": "icon_NumberLine.png",
+    "defaults": {
+      "tool_title": "Number Line",
+      "tool_desc": "",
+      "tool_use": "opts",
+      "tool_iconshow": "def",
+      "tool_menu_icon": "opts",
+      "toolopt_use": "on",
+      "tool_order": "0"
+    },
+    "path": "tools/numberline/index.html",
+    "options": {
+      "0": "Graph Rational Numbers",
+      "1": "Add &amp; Subtract Integers",
+      "2": "Add & Subtract Decimals",
+      "3": "Add & Subtract Fractions",
+      "4": "Graph Inequalities"
+    },
+    "dim": {
+      "x": 960,
+      "y": 600
+    }
+  },
+  "placevalueblocks": {
+    "title": "Place-Value Blocks",
+    "tool_icon": "icon_PVB.png",
+    "defaults": {
+      "tool_title": "Place-Value Blocks",
+      "tool_desc": "",
+      "tool_use": "opts",
+      "tool_iconshow": "def",
+      "tool_menu_icon": "opts",
+      "tool_order": "0"
+    },
+    "path": "tools/placevalueblocks/index.html",
+    "options": {
+      "0":"Addition",
+      "1":"Subtraction",
+      "2":"Multiplication",
+      "3":"Division",
+      "4":"Explore"
+    },
+    "dim": {
+      "x": 960,
+      "y": 600
+    }
+  },
+  "areamodels": {
+    "title": "Area Models",
+    "tool_icon": "icon_arrays.png",
+    "defaults": {
+      "tool_title": "Area Models",
+      "tool_desc": "",
+      "tool_use": "opts",
+      "tool_iconshow": "def",
+      "tool_menu_icon": "opts",
+      "tool_order": "0"
+    },
+    "path": "tools/areamodels/index.html",
+    "options": {
+      "0":"Multiplication",
+      "1":"Square Numbers &amp; Roots",
+      "2":"Cube Numbers &amp; Roots"
+    },
+    "dim": {
+      "x": 960,
+      "y": 600
+    }
+  },
+  "fractionsandpercents": {
+    "title": "Fractions &amp; Percents",
+    "tool_icon": "icon_rationalNumbers.png",
+    "defaults": {
+      "tool_title": "Fractions &amp; Percents",
+      "tool_desc": "",
+      "tool_use": "opts",
+      "tool_iconshow": "def",
+      "tool_menu_icon": "opts",
+      "tool_order": "0"
+    },
+    "path": "tools/fractionsandpercents/index.html",
+    "options": {
+      "0":"Compare &amp; Order Fractions",
+      "1":"Compare Mixed Numbers",
+      "2":"Add &amp; Subtract Fractions",
+      "3":"Proportions &amp; Percents"
+    },
+    "dim": {
+      "x": 960,
+      "y": 600
+    }
+  },
+  "integerchips": {
+    "title": "Integer Chips",
+    "tool_icon": "icon_chips.png",
+    "defaults": {
+      "tool_title": "Integer Chips",
+      "tool_desc": "",
+      "tool_use": "opts",
+      "tool_iconshow": "def",
+      "tool_menu_icon": "opts",
+      "tool_order": "0"
+    },
+    "path": "tools/integerchips/index.html",
+    "options": {
+      "0":"Explore",
+      "1":"Addition",
+      "2":"Subtraction"
+    },
+    "dim": {
+      "x": 960,
+      "y": 600
+    }
+  },
+  "algebratiles": {
+    "title": "Algebra Tiles",
+    "tool_icon": "icon_algTiles.png",
+    "defaults": {
+      "tool_title": "Algebra Tiles",
+      "tool_desc": "",
+      "tool_use": "opts",
+      "tool_iconshow": "def",
+      "tool_menu_icon": "opts",
+      "tool_order": "0"
+    },
+    "path": "tools/algebratiles/index.html",
+    "options": {
+      "0":"Explore",
+      "1":"Equation"
+    },
+    "dim": {
+      "x": 960,
+      "y": 600
+    }
+  },
+  "panbalance": {
+    "title": "Pan Balance",
+    "tool_icon": "icon_PanBalance.png",
+    "defaults": {
+      "tool_title": "Pan Balance",
+      "tool_desc": "",
+      "tool_use": "opts",
+      "tool_iconshow": "def",
+      "tool_menu_icon": "opts",
+      "tool_order": "0"
+    },
+    "path": "tools/panbalance/index.html",
+    "options": {},
+    "dim": {
+      "x": 960,
+      "y": 600
+    }
+  },
+  "coordinategrapher": {
+    "title": "Coordinate Grapher",
+    "tool_icon": "icon_coordinateGraph.png",
+    "defaults": {
+      "tool_title": "Coordinate Grapher",
+      "tool_desc": "",
+      "tool_use": "opts",
+      "tool_iconshow": "def",
+      "tool_menu_icon": "opts",
+      "tool_order": "0"
+    },
+    "path": "tools/coordinategrapher/index.html",
+    "options": {
+      "0":"Full Plane",
+      "1":"First Quadrant"
+    },
+    "dim": {
+      "x": 960,
+      "y": 600
+    }
+  },
+  "geometry2d": {
+    "title": "2-D Geometry",
+    "tool_icon": "icon_2d.png",
+    "defaults": {
+      "tool_title": "2-D Geometry",
+      "tool_desc": "",
+      "tool_use": "opts",
+      "tool_iconshow": "def",
+      "tool_menu_icon": "opts",
+      "tool_order": "0"
+    },
+    "path": "tools/geometry2d/index.html",
+    "options": {
+      "0":"Building Figures",
+      "1":"Triangle Conditions"
+    },
+    "dim": {
+      "x": 960,
+      "y": 600
+    }
+  },
+  "geometry3d": {
+    "title": "3-D Geometry",
+    "tool_icon": "icon_3d.png",
+    "defaults": {
+      "tool_title": "3-D Geometry",
+      "tool_desc": "",
+      "tool_use": "opts",
+      "tool_iconshow": "def",
+      "tool_menu_icon": "opts",
+      "tool_order": "0"
+    },
+    "path": "tools/geometry3d/index.html",
+    "options": {
+      "0":"Compare Figures",
+      "1":"Nets"
+    },
+    "dim": {
+      "x": 960,
+      "y": 600
+    }
+  },
+  "dataandgraphs": {
+    "title": "Data &amp; Graphs",
+    "tool_icon": "icon_dataGraph.png",
+    "defaults": {
+      "tool_title": "Data &amp; Graphs",
+      "tool_desc": "",
+      "tool_use": "opts",
+      "tool_iconshow": "def",
+      "tool_menu_icon": "opts",
+      "tool_order": "0"
+    },
+    "path": "tools/dataandgraphs/index.html",
+    "options": {},
+    "dim": {
+      "x": 960,
+      "y": 600
+    }
+  },
+  "probability": {
+    "title": "Probability",
+    "tool_icon": "icon_Probability.png",
+    "defaults": {
+      "tool_title": "Probability",
+      "tool_desc": "",
+      "tool_use": "opts",
+      "tool_iconshow": "def",
+      "tool_menu_icon": "opts",
+      "tool_order": "0"
+    },
+    "path": "tools/probability/index.html",
+    "options": {},
+    "dim": {
+      "x": 960,
+      "y": 600
+    }
+  },
+  "calculator": {
+    "title": "Calculator",
+    "tool_icon": "icon_calculator.png",
+    "defaults": {
+      "tool_title": "Calculator",
+      "tool_desc": "",
+      "tool_use": "opts",
+      "tool_iconshow": "def",
+      "tool_menu_icon": "opts",
+      "tool_order": "0"
+    },
+    "path": "tools/calculator/index.html",
+    "options": {},
+    "dim": {
+      "x": 372,
+      "y": 470
+    }
+  },
+  "envisionbardiagram": {
+    "title": "Envision Bar Diagrams",
+    "tool_icon": "",
+    "defaults": {
+      "tool_title": "Bar Diagrams",
+      "tool_desc": "",
+      "tool_use": "opts",
+      "tool_iconshow": "hide",
+      "tool_menu_icon": "hide",
+      "tool_order": "0"
+    },
+    "path": "tools/envision/EnvisionBarDiagrams.html",
+    "options": {
+      "0":"Add To",
+      "1":"Take From",
+      "2":"Put Together/Take Apart",
+      "3":"Compare: Addition &amp; Subtraction",
+      "4":"Equal Groups: Multiplication &amp; Division",
+      "5":"Compare: Multiplication &amp; Division",
+      "6":"Create a Bar Diagram"
+    },
+    "dim": {
+      "x": 960,
+      "y": 600
+    }
+  },
+  "envisioncounters": {
+    "title": "Envision Counters",
+    "tool_icon": "en_counters.png",
+    "defaults": {
+      "tool_title": "Counters",
+      "tool_desc": "",
+      "tool_use": "opts",
+      "tool_iconshow": "def",
+      "tool_menu_icon": "hide",
+      "tool_order": "0"
+    },
+    "path": "tools/envision/EnvisionCounters.html",
+    "options": {
+      "0":"Counters",
+      "1":"Arrays",
+      "2":"Difference",
+      "3":"Integers"
+    },
+    "dim": {
+      "x": 960,
+      "y": 600
+    }
+  },
+  "envisiondatagraphs": {
+    "title": "Envision Data &amp; Graphs",
+    "tool_icon": "en_graphs.png",
+    "defaults": {
+      "tool_title": "Data &amp; Graphs",
+      "tool_desc": "",
+      "tool_use": "opts",
+      "tool_iconshow": "def",
+      "tool_menu_icon": "hide",
+      "tool_order": "0"
+    },
+    "path": "tools/envision/EnvisionDataAndGraphs.html",
+    "options": {
+      "0":"Plot Data",
+      "1":"Create Plots",
+      "2":"Graph Coordinates and Equations",
+      "3":"Plot Points and Write Coordinates"
+    },
+    "dim": {
+      "x": 960,
+      "y": 600
+    }
+  },
+  "envisionfractions": {
+    "title": "Envision Fractions",
+    "tool_icon": "en_fractions.png",
+    "defaults": {
+      "tool_title": "Fractions",
+      "tool_desc": "",
+      "tool_use": "opts",
+      "tool_iconshow": "def",
+      "tool_menu_icon": "hide",
+      "tool_order": "0"
+    },
+    "path": "tools/envision/EnvisionFractions.html",
+    "options": {
+      "0":"Pieces",
+      "1":"Equivalent Shapes",
+      "2":"Modeling Fractions",
+      "3":"Denominators",
+      "4":"Fraction Strips",
+      "5":"Array",
+      "6":"Multiplying Fractions on a Number Line"
+    },
+    "dim": {
+      "x": 960,
+      "y": 600
+    }
+  },
+  "envisiongeometry": {
+    "title": "Envision Geometry",
+    "tool_icon": "en_geo.png",
+    "defaults": {
+      "tool_title": "Geometry",
+      "tool_desc": "",
+      "tool_use": "opts",
+      "tool_iconshow": "def",
+      "tool_menu_icon": "hide",
+      "tool_order": "0"
+    },
+    "path": "tools/envision/EnvisionGeometry.html",
+    "options": {
+      "0":"Shapes",
+      "1":"Tangrams",
+      "2":"Exploring Solids",
+      "3":"Building Nets"
+    },
+    "dim": {
+      "x": 960,
+      "y": 600
+    }
+  },
+  "envisionomachine": {
+    "title": "Envision IO Machine",
+    "tool_icon": "en_io.png",
+    "defaults": {
+      "tool_title": "Input/Output Machine",
+      "tool_desc": "",
+      "tool_use": "opts",
+      "tool_iconshow": "def",
+      "tool_menu_icon": "hide",
+      "tool_order": "0"
+    },
+    "path": "tools/envision/EnvisionIOMachine.html",
+    "options": {
+      "0":"Explore",
+      "1":"Predict the Output"
+    },
+    "dim": {
+      "x": 960,
+      "y": 600
+    }
+  },
+  "envisionomeasuringcylinders": {
+    "title": "Envision Measuring Cylinders",
+    "tool_icon": "en_measure.png",
+    "defaults": {
+      "tool_title": "Measuring Cylinders",
+      "tool_desc": "",
+      "tool_use": "opts",
+      "tool_iconshow": "def",
+      "tool_menu_icon": "hide",
+      "tool_order": "0"
+    },
+    "path": "tools/envision/EnvisionMeasuringCylinders.html",
+    "options": {
+      "0":"Thermometers",
+      "1":"Containers"
+    },
+    "dim": {
+      "x": 960,
+      "y": 600
+    }
+  },
+  "envisionomoney": {
+    "title": "Envision Money",
+    "tool_icon": "en_money.png",
+    "defaults": {
+      "tool_title": "Money",
+      "tool_desc": "",
+      "tool_use": "opts",
+      "tool_iconshow": "def",
+      "tool_menu_icon": "hide",
+      "tool_order": "0"
+    },
+    "path": "tools/envision/EnvisionMoney.html",
+    "options": {},
+    "dim": {
+      "x": 960,
+      "y": 600
+    }
+  },
+  "envisiononumbercharts": {
+    "title": "Envision Number Charts",
+    "tool_icon": "en_numcharts.png",
+    "defaults": {
+      "tool_title": "Number Charts",
+      "tool_desc": "",
+      "tool_use": "opts",
+      "tool_iconshow": "def",
+      "tool_menu_icon": "hide",
+      "tool_order": "0"
+    },
+    "path": "tools/envision/EnvisionNumberCharts.html",
+    "options": {
+      "0":"Hundred Chart",
+      "1":"Addition Chart",
+      "2":"Multipication Chart"
+    },
+    "dim": {
+      "x": 960,
+      "y": 600
+    }
+  },
+  "envisiononumberline": {
+    "title": "Envision Number Line",
+    "tool_icon": "en_numline.png",
+    "defaults": {
+      "tool_title": "Number Line",
+      "tool_desc": "",
+      "tool_use": "opts",
+      "tool_iconshow": "def",
+      "tool_menu_icon": "hide",
+      "tool_order": "0"
+    },
+    "path": "tools/envision/EnvisionNumberLine.html",
+    "options": {
+      "0":"Numbers",
+      "1":"Add and Subtract Whole Numbers",
+      "2":"Add and Subtract Decimals",
+      "3":"Add and Subtract Fractions",
+      "4":"Intervals"
+    },
+    "dim": {
+      "x": 960,
+      "y": 600
+    }
+  },
+  "envisionpanbalance": {
+    "title": "Envision Pan Balance",
+    "tool_icon": "en_pan.png",
+    "defaults": {
+      "tool_title": "Pan Balance",
+      "tool_desc": "",
+      "tool_use": "opts",
+      "tool_iconshow": "def",
+      "tool_menu_icon": "hide",
+      "tool_order": "0"
+    },
+    "path": "tools/envision/EnvisionPanBalance.html",
+    "options": {
+      "0":"Numbers",
+      "1":"Symbols"
+    },
+    "dim": {
+      "x": 960,
+      "y": 600
+    }
+  },
+  "envisionplacevalueblocks": {
+    "title": "Envision Place Value Blocks",
+    "tool_icon": "en_place.png",
+    "defaults": {
+      "tool_title": "Place Value Blocks",
+      "tool_desc": "",
+      "tool_use": "opts",
+      "tool_iconshow": "def",
+      "tool_menu_icon": "hide",
+      "tool_order": "0"
+    },
+    "path": "tools/envision/EnvisionPlaceValueBlocks.html",
+    "options": {
+      "0":"Place-Value Blocks",
+      "1":"Arrays",
+      "2":"Place-Value Chips"
+    },
+    "dim": {
+      "x": 960,
+      "y": 600
+    }
+  },
+  "envisionstripdiagrams": {
+    "title": "Envision Strip Diagrams",
+    "tool_icon": "en_strip.png",
+    "defaults": {
+      "tool_title": "Strip Diagrams",
+      "tool_desc": "",
+      "tool_use": "opts",
+      "tool_iconshow": "def",
+      "tool_menu_icon": "hide",
+      "tool_order": "0"
+    },
+    "path": "tools/envision/EnvisionStripDiagrams.html",
+    "options": {
+      "0":"Part-Part-Whole: Addition and Subtraction",
+      "1":"Comparision: Addition and Subtraction",
+      "2":"Equal Parts: Multiplication and Division",
+      "3":"Comparision: Multiplication and Division",
+      "4":"Create a Strip Diagram"
+    },
+    "dim": {
+      "x": 960,
+      "y": 600
+    }
+  },
+  "envisionexpressioncalculator": {
+    "title": "Envision Expression Calculator",
+    "tool_icon": "icon_calculator.png",
+    "defaults": {
+      "tool_title": "Calculator",
+      "tool_desc": "",
+      "tool_use": "opts",
+      "tool_iconshow": "def",
+      "tool_menu_icon": "hide",
+      "tool_order": "0"
+    },
+    "path": "tools/envision/ExpressionCalculator.html",
+    "options": {},
+    "dim": {
+      "x": 372,
+      "y": 470
+    }
+  },
+  "high2d": {
+    "title": "High School 2D Geometric Constructor",
+    "tool_icon": "hs_icon_2DG.png",
+    "defaults": {
+      "tool_title": "2D Geometric Constructor",
+      "tool_desc": "",
+      "tool_use": "opts",
+      "tool_iconshow": "show",
+      "tool_menu_icon": "hide",
+      "tool_order": "0"
+    },
+    "path": "tools/highschool/hs_geometry2dtool/HS_Geometry2D.html",
+    "options": {
+      "0":"Transformations",
+      "1":"Constructions",
+      "2":"Estimating Area",
+      "3":"Vectors"
+    },
+    "dim": {
+      "x": 960,
+      "y": 600
+    }
+  },
+  "high3d": {
+    "title": "High School 3D Geometric Constructor",
+    "tool_icon": "hs_icon_3DG.png",
+    "defaults": {
+      "tool_title": "3D Geometric Constructor",
+      "tool_desc": "",
+      "tool_use": "opts",
+      "tool_iconshow": "show",
+      "tool_menu_icon": "hide",
+      "tool_order": "0"
+    },
+    "path": "tools/highschool/hs_geometry3d/HS_Geometry3D.html",
+    "options": {
+      "0":"Explore Solids",
+      "1":"Compare Solids",
+      "2":"Explore Nets of Solids"
+    },
+    "dim": {
+      "x": 960,
+      "y": 600
+    }
+  },
+  "highalgtiles": {
+    "title": "High School Algebra Tiles",
+    "tool_icon": "hs_icon_AT.png",
+    "defaults": {
+      "tool_title": "Algebra Tiles",
+      "tool_desc": "",
+      "tool_use": "opts",
+      "tool_iconshow": "show",
+      "tool_menu_icon": "hide",
+      "tool_order": "0"
+    },
+    "path": "tools/highschool/hs_algebratiles/HS_AlgebraTiles.html",
+    "options": {
+      "0":"Explore",
+      "1":"Addition",
+      "2":"Subtraction",
+      "3":"Multiplication",
+      "4":"Division",
+      "5":"Solve Equations"
+    },
+    "dim": {
+      "x": 960,
+      "y": 600
+    }
+  },
+  "highgu": {
+    "title": "High School Graphing Utility",
+    "tool_icon": "hs_icon_GU.png",
+    "defaults": {
+      "tool_title": "Graphing Utility",
+      "tool_desc": "",
+      "tool_use": "opts",
+      "tool_iconshow": "show",
+      "tool_menu_icon": "hide",
+      "tool_order": "0"
+    },
+    "path": "tools/highschool/hs_graphingtool/HS_GraphingTool.html",
+    "options": {
+      "0":"Functions",
+      "1":"Scatter Plot"
+    },
+    "dim": {
+      "x": 960,
+      "y": 600
+    }
+  },
+  "highnumline": {
+    "title": "High School Number Line",
+    "tool_icon": "hs_icon_NL.png",
+    "defaults": {
+      "tool_title": "Number Line",
+      "tool_desc": "",
+      "tool_use": "opts",
+      "tool_iconshow": "show",
+      "tool_menu_icon": "hide",
+      "tool_order": "0"
+    },
+    "path": "tools/highschool/hs_numberlinetool/HS_NumberLineTool.html",
+    "options": {
+      "0":"Graph Real Numbers",
+      "1":"Add and Subtract Integers",
+      "2":"Add and Subtract Decimals",
+      "3":"Add and Subtract Fractions",
+      "4":"Graph Inequalities"
+    },
+    "dim": {
+      "x": 960,
+      "y": 600
+    }
+  }
+}

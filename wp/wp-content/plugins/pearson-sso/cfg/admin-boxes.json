@@ -1,0 +1,423 @@
+[
+  {
+    "id": "psso_gen",
+    "title": "Master Switch",
+    "show_on": {
+      "key": "options-page",
+      "value": [
+        "pearson-sso"
+      ]
+    },
+    "object_types": [
+      "options-page"
+    ],
+    "fields" : [
+      "psso_master"
+    ]
+  },
+  {
+    "id": "psso_login",
+    "title": "Login Capturing",
+    "show_on": {
+      "key": "options-page",
+      "value": [
+        "pearson-sso"
+      ]
+    },
+    "object_types": [
+      "options-page"
+    ],
+    "fields" : [
+      "psso_auth_login",
+      "psso_auth_login_district_require",
+      "psso_auth_login_show_district"
+    ]
+  },
+  {
+    "id": "psso_toke",
+    "title": "Schoolnet Tokens",
+    "show_on": {
+      "key": "options-page",
+      "value": [
+        "pearson-sso"
+      ]
+    },
+    "object_types": [
+      "options-page"
+    ],
+    "fields" : [
+      "psso_auth_token"
+    ]
+  },
+  {
+    "id": "psso_usergen",
+    "title": "User Identification",
+    "show_on": {
+      "key": "options-page",
+      "value": [
+        "pearson-sso-user"
+      ]
+    },
+    "object_types": [
+      "options-page"
+    ],
+    "fields" : [
+      "psso_username",
+      "psso_usernamecase",
+      "psso_useremail"
+    ]
+  },
+  {
+    "id": "psso_userroles",
+    "title": "User Roles",
+    "show_on": {
+      "key": "options-page",
+      "value": [
+        "pearson-sso-user"
+      ]
+    },
+    "object_types": [
+      "options-page"
+    ],
+    "fields" : [
+      "psso_defaultrole",
+      "psso_defaultrolecase",
+      "psso_usergroup"
+    ]
+  },
+  {
+    "id": "psso_usererrors",
+    "title": "SSO User Errors",
+    "show_on": {
+      "key": "options-page",
+      "value": [
+        "pearson-sso-user"
+      ]
+    },
+    "object_types": [
+      "options-page"
+    ],
+    "fields" : [
+      "psso_user_error_role",
+      "psso_user_error_norole",
+      "psso_user_error_password",
+      "psso_user_error_email"
+    ]
+  },
+  {
+    "id": "psso_userprotect",
+    "title": "Protected Users",
+    "show_on": {
+      "key": "options-page",
+      "value": [
+        "pearson-sso-user"
+      ]
+    },
+    "object_types": [
+      "options-page"
+    ],
+    "fields" : [
+      "psso_user_protectroles",
+      "psso_user_protect"
+    ]
+  },
+  {
+    "id": "psso_payurl",
+    "title": "URL Rules",
+    "show_on": {
+      "key": "options-page",
+      "value": [
+        "pearson-sso-pay"
+      ]
+    },
+    "object_types": [
+      "options-page"
+    ],
+    "fields" : [
+      "psso_urlgroup"
+    ]
+  },
+  {
+    "id": "psso_payvars",
+    "title": "Query String Variables",
+    "show_on": {
+      "key": "options-page",
+      "value": [
+        "pearson-sso-pay"
+      ]
+    },
+    "object_types": [
+      "options-page"
+    ],
+    "fields" : [
+      "psso_query_payload",
+      "psso_query_key",
+      "psso_query_extra"
+    ]
+  },
+  {
+    "id": "psso_xvars",
+    "title": "Payload Variables",
+    "show_on": {
+      "key": "options-page",
+      "value": [
+        "pearson-sso-pay"
+      ]
+    },
+    "object_types": [
+      "options-page"
+    ],
+    "fields" : [
+      "psso_payvargroup"
+    ]
+  },
+  {
+    "id": "psso_paycook",
+    "title": "Cookies",
+    "show_on": {
+      "key": "options-page",
+      "value": [
+        "pearson-sso-pay"
+      ]
+    },
+    "object_types": [
+      "options-page"
+    ],
+    "fields" : [
+      "psso_cookiegroup"
+    ]
+  },
+  {
+    "id": "psso_payrule",
+    "title": "Routing Rules",
+    "show_on": {
+      "key": "options-page",
+      "value": [
+        "pearson-sso-pay"
+      ]
+    },
+    "object_types": [
+      "options-page"
+    ],
+    "fields" : [
+      "psso_ruleerror",
+      "psso_rulegroup"
+    ]
+  },
+  {
+    "id": "psso_cryde",
+    "title": "Decryption Methods",
+    "show_on": {
+      "key": "options-page",
+      "value": [
+        "pearson-sso-cry"
+      ]
+    },
+    "object_types": [
+      "options-page"
+    ],
+    "fields" : [
+      "psso_decryptgroup"
+    ]
+  },
+  {
+    "id": "psso_apisch",
+    "title": "SchoolNet",
+    "show_on": {
+      "key": "options-page",
+      "value": [
+        "pearson-sso-api"
+      ]
+    },
+    "object_types": [
+      "options-page"
+    ],
+    "fields" : [
+      "psso_auth_login_location",
+      "psso_auth_client_id",
+      "psso_auth_api_login",
+      "psso_auth_api_token"
+    ]
+  },
+  {
+    "id": "psso_trackvar",
+    "title": "Tracking Variables",
+    "show_on": {
+      "key": "options-page",
+      "value": [
+        "pearson-sso-track"
+      ]
+    },
+    "object_types": [
+      "options-page"
+    ],
+    "fields" : [
+      "psso_auth_api_config_payload_var",
+      "psso_auth_api_config_file"
+    ]
+  },
+  {
+    "id": "psso_trackrule",
+    "title": "Tracking Rules",
+    "show_on": {
+      "key": "options-page",
+      "value": [
+        "pearson-sso-track"
+      ]
+    },
+    "object_types": [
+      "options-page"
+    ],
+    "fields" : [
+      "psso_trackgroup"
+    ]
+  },
+  {
+    "id": "psso_trackdist",
+    "title": "Districts",
+    "show_on": {
+      "key": "options-page",
+      "value": [
+        "pearson-sso-track"
+      ]
+    },
+    "object_types": [
+      "options-page"
+    ],
+    "fields" : [
+      "psso_distgroup"
+    ]
+  },
+  {
+    "id": "psso_trackfill",
+    "title": "Placeholder Districts",
+    "show_on": {
+      "key": "options-page",
+      "value": [
+        "pearson-sso-track"
+      ]
+    },
+    "object_types": [
+      "options-page"
+    ],
+    "fields" : [
+      "psso_distfill"
+    ]
+  },
+  {
+    "id": "psso_uibox",
+    "title": "Login Box",
+    "show_on": {
+      "key": "options-page",
+      "value": [
+        "pearson-sso-ui"
+      ]
+    },
+    "object_types": [
+      "options-page"
+    ],
+    "fields" : [
+      "psso_auth_login_title",
+      "psso_auth_login_district",
+      "psso_error_login_general"
+    ]
+  },
+  {
+    "id": "psso_uiapi",
+    "title": "Errors: Schoolnet API Login",
+    "show_on": {
+      "key": "options-page",
+      "value": [
+        "pearson-sso-ui"
+      ]
+    },
+    "object_types": [
+      "options-page"
+    ],
+    "fields" : [
+      "psso_error_login_environment_no_server",
+      "psso_error_login_environment_not_json",
+      "psso_error_login_environment_no_env",
+      "psso_error_login_environment_sideways"
+    ]
+  },
+  {
+    "id": "psso_uitoken",
+    "title": "Errors: Schoolnet Tokens",
+    "show_on": {
+      "key": "options-page",
+      "value": [
+        "pearson-sso-ui"
+      ]
+    },
+    "object_types": [
+      "options-page"
+    ],
+    "fields" : [
+      "psso_error_login_token_no_server",
+      "psso_error_login_token_bad_request",
+      "psso_error_login_token_none",
+      "psso_error_login_token_sideways",
+      "psso_error_login_token_client"
+    ]
+  },
+  {
+    "id": "psso_loggen",
+    "title": "General Logging",
+    "show_on": {
+      "key": "options-page",
+      "value": [
+        "pearson-sso-log"
+      ]
+    },
+    "object_types": [
+      "options-page"
+    ],
+    "fields" : [
+      "psso_logs",
+      "psso_log_expire",
+      "psso_log_access"
+    ]
+  },
+  {
+    "id": "psso_logdet",
+    "title": "Log Specific Features",
+    "show_on": {
+      "key": "options-page",
+      "value": [
+        "pearson-sso-log"
+      ]
+    },
+    "object_types": [
+      "options-page"
+    ],
+    "fields" : [
+      "psso_log_form_visits",
+      "psso_log_tests"
+    ]
+  },
+  {
+    "id": "psso_save",
+    "title": "Update",
+    "show_on": {
+      "key": "options-page",
+      "value": [
+        "pearson-sso",
+        "pearson-sso-pay",
+        "pearson-sso-user",
+        "pearson-sso-cry",
+        "pearson-sso-api",
+        "pearson-sso-track",
+        "pearson-sso-ui",
+        "pearson-sso-log"
+      ]
+    },
+    "object_types": [
+      "options-page"
+    ],
+    "fields" : [
+      "psso_save"
+    ],
+    "context": "side"
+  }
+]

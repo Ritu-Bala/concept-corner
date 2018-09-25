@@ -1,0 +1,7 @@
+.svn
+*.cache.js
+*.tmp
+phpMyAdmin
+loaderio-4ead0e45d15f78e5e6a6fe72b2976c74.txt
+wp/wp-content/uploads/
+wp/wp-content/cache/

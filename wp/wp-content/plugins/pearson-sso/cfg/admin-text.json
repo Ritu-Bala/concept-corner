@@ -1,0 +1,29 @@
+{
+  "before-pearson-sso": [
+    "Pearson_SSO_Admin_Views",
+    "general"
+  ],
+  "before-pearson-sso-test": [
+    "Pearson_SSO_Admin_Views",
+    "test"
+  ],
+  "before-pearson-sso-logs": [
+    "Pearson_SSO_Admin_Views",
+    "logs"
+  ],
+  "tab-general-master": "<p>Turn various SSO features on and off.</p>",
+  "tab-general-exp": "<p>Experimental features, some may be site-specific.</p>",
+  "tab-user-gen": "<p>Define how SSO identifies users from payloads or tokens.</p>",
+  "tab-user-roles": "<p>Define user roles.</p>",
+  "tab-user-errors": "<p>The following errors can occur for existing users. They are usually caused by a previous visit via app (possibly in a test mode, or due to bugs in the app) caused WordPress to save the wrong value to the database.</p>",
+  "tab-user-protect": "<p>The following user names will not be altered by SSO when attempting to fix user issues. SSO will fail if the payload contains this user, and their information does not match what WP has saved.</p>",
+  "tab-pay-url": "<p>You can set which URLs on your site can process payload requests.</p>",
+  "tab-pay-vars": "<p>Query string variables are those present in the request URL; Payload variables are those within the decrypted payload.</p>",
+  "tab-pay-cookie": "<p>SSO generally doesn't use cookies internally, but you can set them here so your theme or plugin can leverage SSO decrypted information.</p>",
+  "tab-pay-rule": "<p>Forward users to pages based on payload vars. <b>Rules are processed in order</b> and stop when a match is made. Start with most complex rules and end with simplest.</p><hr><p>'Checks' are constructed by:</p><p><i>Defining a variable:</i></p><ul><li><code>[payloadVarName]</code> A payload variable, name must be exact.</li><li><code>[urlPath]</code> The URL the SSO attempt arrived at, not including the domain ( ex: '/help' ). Can only be used with <code>path=</code></li></ul><p><i>Testing it using these logic operators:</i></p><ul><li><code>=</code> <code>not=</code> <code>&gt;</code> <code>&gt;=</code>  <code>&lt;</code> <code>&lt;=</code> <code>path=</code></li></ul><p><i>Against a value or values:</i></p><ul><li><code>your value</code> If spaces used within, evaluated as phrase; case sensitive. If matching [urlPath], <code>*</code> ok within value.</li><li><code>{value 1, value 2, etc}</code> Multiple values, separated by commas, within curly brackets.</li></ul><p><i>Wildcards can be used instead of a defined value (only with <code>=</code> operator):</i></p><ul><li><code>#</code> Any number</li><li><code>*</code> Any string</li></ul><p><i>There is one special check:</i></p><ul><li><code>*</code> Used <b>by itself</b> in the check box will match anything. Use as catchall if needed (as final rule!).</li></ul><hr><p>Only one logic operator is allowed per check statement. The following are valid sample 'checks':</p><ul><li><code>[grade] = k</code> If the payload variable 'grade' is 'k'</li><li><code>[grade] not= {2,3,4}</code> If the payload variable 'grade' is not '2' nor '3' nor '4'</li></ul>",
+  "tab-cry-de": "<p>SSO will attempt to decrypt the payload using the following methods, in order, until it finds one which returns usable data. If none do, then SSO will mark the visit as a failure.</p>",
+  "tab-cry-en": "<p>Not available.</p>",
+  "tab-track-setup" : "<p>Your site may use tracks to assign content. Configure how SSO finds them.</p>",
+  "tab-track-districts": "<p>Districts added below will replace their counterparts in the 'filler' list if the names exactly match.</p>",
+  "tab-track-filler": "<p>Use to 'pad' the districts list.</p>"
+}

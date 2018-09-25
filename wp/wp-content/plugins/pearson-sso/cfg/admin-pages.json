@@ -1,0 +1,238 @@
+[
+  {
+    "key": "psso_options",
+    "title": "Pearson SSO",
+    "menuargs": {
+      "menu_title": "Pearson SSO",
+      "menu_slug": "pearson-sso",
+      "icon_url": "dashicons-unlock",
+      "network": true
+    },
+    "boxes": [
+      "psso_gen",
+      "psso_login",
+      "psso_toke",
+      "psso_save"
+    ],
+    "tabs": [
+    ],
+    "cols": 2,
+    "savetxt": "",
+    "getboxes": false
+  },
+  {
+    "key": "psso_options",
+    "title": "Pearson SSO",
+    "regkey": false,
+    "menuargs": {
+      "parent_slug": "pearson-sso",
+      "menu_title": "General Options",
+      "menu_slug": "pearson-sso",
+      "network": true
+    }
+  },
+  {
+    "key": "psso_options",
+    "title": "User Discovery and Options",
+    "menuargs": {
+      "parent_slug": "pearson-sso",
+      "menu_title": "Users",
+      "menu_slug": "pearson-sso-user",
+      "network": true
+    },
+    "boxes": [
+      "psso_usergen",
+      "psso_userroles",
+      "psso_usererrors",
+      "psso_userprotect",
+      "psso_save"
+    ],
+    "tabs": [
+      "{{tabs user-gen}}",
+      "{{tabs user-roles}}",
+      "{{tabs user-errors}}",
+      "{{tabs user-protect}}"
+    ],
+    "cols": 2,
+    "savetxt": "",
+    "getboxes": false
+  },
+  {
+    "key": "psso_options",
+    "title": "Processing Decrypted Data",
+    "menuargs": {
+      "parent_slug": "pearson-sso",
+      "menu_title": "Payloads",
+      "menu_slug": "pearson-sso-pay",
+      "network": true
+    },
+    "boxes": [
+      "psso_payurl",
+      "psso_payvars",
+      "psso_xvars",
+      "psso_paycook",
+      "psso_payrule",
+      "psso_save"
+    ],
+    "tabs": [
+      "{{tabs pay-url}}",
+      "{{tabs pay-vars}}",
+      "{{tabs pay-cookie}}",
+      "{{tabs pay-rule}}"
+    ],
+    "cols": 2,
+    "savetxt": "",
+    "getboxes": false
+  },
+  {
+    "key": "psso_options",
+    "title": "Encyption and Decryption",
+    "menuargs": {
+      "parent_slug": "pearson-sso",
+      "menu_title": "Crypt",
+      "menu_slug": "pearson-sso-cry",
+      "network": true
+    },
+    "boxes": [
+      "psso_cryde",
+      "psso_save"
+    ],
+    "tabs": [
+      "{{tabs cry-de}}",
+      "{{tabs cry-en}}"
+    ],
+    "cols": 2,
+    "savetxt": "",
+    "getboxes": false
+  },
+  {
+    "key": "psso_options",
+    "title": "Configure APIs",
+    "menuargs": {
+      "parent_slug": "pearson-sso",
+      "menu_title": "APIs",
+      "menu_slug": "pearson-sso-api",
+      "network": true
+    },
+    "boxes": [
+      "psso_apisch",
+      "psso_save"
+    ],
+    "tabs": [],
+    "cols": 2,
+    "savetxt": "",
+    "getboxes": false
+  },
+  {
+    "key": "psso_options",
+    "title": "Configure Tracking and Districts",
+    "menuargs": {
+      "parent_slug": "pearson-sso",
+      "menu_title": "Tracks",
+      "menu_slug": "pearson-sso-track",
+      "network": true
+    },
+    "boxes": [
+      "psso_trackvar",
+      "psso_trackrule",
+      "psso_trackdist",
+      "psso_trackfill",
+      "psso_save"
+    ],
+    "tabs": [
+      "{{tabs track-setup}}",
+      "{{tabs track-districts}}",
+      "{{tabs track-filler}}"
+    ],
+    "cols": 2,
+    "savetxt": "",
+    "getboxes": false
+  },
+  {
+    "key": "psso_options",
+    "title": "Text Strings Shown to User",
+    "menuargs": {
+      "parent_slug": "pearson-sso",
+      "menu_title": "Public UI",
+      "menu_slug": "pearson-sso-ui",
+      "network": true
+    },
+    "boxes": [
+      "psso_uibox",
+      "psso_uiapi",
+      "psso_uitoken",
+      "psso_save"
+    ],
+    "tabs": [],
+    "cols": 2,
+    "savetxt": "",
+    "getboxes": false
+  },
+  {
+    "key": "psso_options",
+    "title": "Logging Options",
+    "menuargs": {
+      "parent_slug": "pearson-sso",
+      "menu_title": "Logging",
+      "menu_slug": "pearson-sso-log",
+      "network": true
+    },
+    "boxes": [
+      "psso_loggen",
+      "psso_logdet",
+      "psso_save"
+    ],
+    "tabs": [],
+    "cols": 2,
+    "savetxt": "",
+    "getboxes": false
+  },
+  {
+    "key": "psso_options",
+    "title": "",
+    "regkey": false,
+    "menuargs": {
+      "parent_slug": "pearson-sso",
+      "menu_title": "<span style='display:block;margin:1px 0 1px -5px;padding:0;height:1px;line-height:1px;background:#ccc;'></span>",
+      "menu_slug": "#",
+      "network": true
+    },
+    "savetxt": "",
+    "getboxes": false
+  },
+  {
+    "key": "psso_options",
+    "title": "Testing Pearson SSO ",
+    "regkey": false,
+    "menuargs": {
+      "parent_slug": "pearson-sso",
+      "menu_title": "Test Payload",
+      "menu_slug": "pearson-sso-test",
+      "network": true
+    },
+    "savetxt": "",
+    "getboxes": false
+  },
+  {
+    "key": "psso_options",
+    "title": "Pearson SSO Logs",
+    "regkey": false,
+    "menuargs": {
+      "parent_slug": "pearson-sso",
+      "menu_title": "View Logs",
+      "menu_slug": "pearson-sso-logs",
+      "network": true
+    },
+    "savetxt": "",
+    "getboxes": false,
+    "load": [
+      {
+        "action" : "load-[hook]",
+        "callback": [
+          "Pearson_SSO_Admin_Views",
+          "table_options"
+        ]
+      }
+    ]
+  }
+]

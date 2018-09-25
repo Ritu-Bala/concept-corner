@@ -1,0 +1,765 @@
+[
+  {
+    "id": "psso_master",
+    "name": "Use SSO",
+    "desc": "You can also disable the plugin to turn SSO off.",
+    "type": "radio_inline",
+    "default": "off",
+    "options": {
+      "on": "Turn SSO On",
+      "off": "Turn SSO Off"
+    }
+  },
+  {
+    "id": "psso_auth_token",
+    "name": "Login via Schoolnet Token",
+    "desc": "Try logging in via payload tokens if no user/userType.",
+    "type": "radio_inline",
+    "default": "off",
+    "options": {
+      "on": "On",
+      "off": "Off"
+    }
+  },
+  {
+    "id": "psso_auth_login",
+    "name": "Capture Login Form Submit",
+    "desc": "Log users in via Pearson Schoolnet via WordPress login form.",
+    "type": "radio_inline",
+    "default": "off",
+    "options": {
+      "on": "On",
+      "off": "Off"
+    }
+  },
+  {
+    "id": "psso_auth_login_district_require",
+    "name": "Require District",
+    "desc": "Force users to select district on login form.",
+    "type": "radio_inline",
+    "default": "off",
+    "options": {
+      "on": "On",
+      "off": "Off"
+    },
+    "row_classes": "psso-trigger",
+    "attributes": {
+      "data-affect": "psso_auth_login_show_district",
+      "data-disable": "off"
+    }
+  },
+  {
+    "id": "psso_auth_login_show_district",
+    "name": "Add District Selector",
+    "desc": "Add the district auto-complete box. If you turn this off, you will have to provide a form element to do this.",
+    "type": "radio_inline",
+    "default": "off",
+    "options": {
+      "auto": "Auto-complete",
+      "select": "Dropdown",
+      "off": "Off"
+    }
+  },
+  {
+    "id": "psso_urlgroup",
+    "type": "group",
+    "description": "* = all pages &nbsp;&nbsp;&nbsp; / = home page &nbsp;&nbsp;&nbsp; /section/* = all pages in \"section\"",
+    "options": {
+      "group_title": "URL {#}",
+      "add_button": "Add Another URL",
+      "remove_button": "Remove URL",
+      "sortable": true
+    },
+    "fields": [
+      {
+        "name": "URL",
+        "id": "url",
+        "type": "text",
+        "description": "Examples: &nbsp;&nbsp;&nbsp; / &nbsp;&nbsp;&nbsp; /page/ &nbsp;&nbsp;&nbsp; /about/page.php &nbsp;&nbsp;&nbsp; /section/*",
+        "escape_cb": "stripslashes_deep"
+      },
+      {
+        "name": "With this",
+        "id": "permission",
+        "type": "radio_inline",
+        "default": "allow",
+        "options": {
+          "allow": "Allow SSO",
+          "deny": "Deny SSO"
+        }
+      }
+    ]
+  },
+  {
+    "id": "psso_query_payload",
+    "name": "\"Payload\" Var Name",
+    "desc": "?<strong>payload</strong>=abcdefghij...",
+    "type": "text_small",
+    "default": "payload",
+    "escape_cb": "stripslashes_deep"
+  },
+  {
+    "id": "psso_query_key",
+    "name": "\"Key\" Var Name",
+    "desc": "?<strong>key</strong>=abcdefghij...",
+    "type": "text_small",
+    "default": "key",
+    "escape_cb": "stripslashes_deep"
+  },
+  {
+    "id": "psso_query_extra",
+    "name": "Allow ONLY these query vars",
+    "desc": "Not allowing extra query vars can potentially improve site performance and security; allowing them can make SSO more flexible",
+    "type": "radio_inline",
+    "default": "deny",
+    "options": {
+      "allow": "Allow extra query variables",
+      "deny": "Prohibit extra query variables"
+    },
+    "row_classes": "psso-trigger",
+    "attributes": {
+      "data-affect": "psso_payvar[0]",
+      "data-disable": "deny"
+    }
+  },
+  {
+    "id": "psso_payvar",
+    "name": "Additional Payload Variables",
+    "desc": "Identifying specific variables here will allow their use in cookies or other SSO functions. These must be an exact match to the decrypted variable name.",
+    "type": "text_medium",
+    "repeatable": true,
+    "escape_cb": "stripslashes_deep"
+  },
+  {
+    "id": "psso_payvargroup",
+    "type": "group",
+    "description": "Identify payload variables in order to:</p><ul><li>Use them in other SSO functions, like cookies</li><li>Require for SSO to continue</li></ul>",
+    "options": {
+      "group_title": "Variable {#}",
+      "add_button": "Add Another Variable",
+      "remove_button": "Remove Variable",
+      "sortable": true
+    },
+    "fields": [
+      {
+        "name": "Variable",
+        "id": "var",
+        "type": "text_medium",
+        "description": "Exact match to payload variable",
+        "escape_cb": "stripslashes_deep"
+      },
+      {
+        "name": "Attributes",
+        "id": "atts",
+        "desc": "",
+        "type": "multicheck",
+        "options": {
+          "critical": "Critical: If not in payload, SSO should fail",
+          "case": "Ignore Case: <code>var</code> will also match <code>Var</code>, <code>VAR</code>, etc."
+        }
+      }
+    ]
+  },
+  {
+    "id": "psso_username",
+    "name": "Payload User Variable",
+    "desc": "What decrypted variable contains the \"user name\"?<br>For nested variables, use two colons <code>::</code> to separate the keys:<br><code>[data][user][name]</code> should be saved here as: <code>data::user::name</code>",
+    "type": "text_medium",
+    "default": "user",
+    "repeatable": true,
+    "escape_cb": "stripslashes_deep"
+  },
+  {
+    "id": "psso_usernamecase",
+    "name": "User Variable: Ignore Case?",
+    "type": "checkbox",
+    "description": "Yes ( <code>abc</code> will also match <code>Abc</code>, <code>ABC</code>, etc. )"
+  },
+  {
+    "id": "psso_useremail",
+    "name": "New User Password",
+    "desc": "Tokens: <code>[user]</code><br>WordPress requires a unique email for each user, this value must contain the token, and be a valid email format.",
+    "type": "text_medium",
+    "default": "ccsoc-[user]@example.com",
+    "escape_cb": "stripslashes_deep"
+  },
+  {
+    "id": "psso_defaultrole",
+    "name": "Default User Role:",
+    "type": "select",
+    "description": "If the rules below do not match, assign this role to new user.",
+    "options": "{{get_user_roles}}"
+  },
+  {
+    "id": "psso_defaultrolecase",
+    "name": "Defined Roles: Ignore Case?",
+    "type": "checkbox",
+    "description": "Yes ( <code>abc</code> will also match <code>Abc</code>, <code>ABC</code>, etc. )"
+  },
+  {
+    "id": "psso_usergroup",
+    "type": "group",
+    "description": "Defined Roles",
+    "options": {
+      "group_title": "Role {#}",
+      "add_button": "Add Another Role",
+      "remove_button": "Remove Role",
+      "sortable": true
+    },
+    "fields": [
+      {
+        "name": "When payload variable:",
+        "id": "payload",
+        "type": "text_medium",
+        "description": "Payload variable to evaluate, use two colons <code>::</code> to separate nested keys",
+        "escape_cb": "stripslashes_deep"
+      },
+      {
+        "name": "Is equal to:",
+        "id": "value",
+        "type": "text_medium",
+        "description": "What payload variable is set to.",
+        "escape_cb": "stripslashes_deep"
+      },
+      {
+        "name": "Check/Create new user of type:",
+        "id": "role",
+        "type": "select",
+        "description": "",
+        "options": "{{get_user_roles}}"
+      }
+    ]
+  },
+  {
+    "id": "psso_user_error_role",
+    "name": "User Role Doesn't Match Payload Role",
+    "desc": "The payload has a 'good' role defined, but WordPress has a different one saved for the user. Note the saved WP role may not be one defined by SSO, such as 'subscriber'.",
+    "type": "radio",
+    "default": "fix",
+    "options": {
+      "fix": "Fix: Remove existing role, save payload role.",
+      "die": "Don't Fix: Exit SSO"
+    }
+  },
+  {
+    "id": "psso_user_error_norole",
+    "name": "Payload did not contain matching role",
+    "desc": "Either the payload did not contain a role at all, or the role it contains does not match one configured here.",
+    "type": "radio",
+    "default": "fix",
+    "options": {
+      "fix": "Fix: Use the default role for this user.",
+      "die": "Don't Fix: Exit SSO"
+    }
+  },
+  {
+    "id": "psso_user_error_password",
+    "name": "User Password Doesn't Match",
+    "desc": "Payload user passwords are automatically generated based on username and role at time of user creation.",
+    "type": "radio",
+    "default": "fix",
+    "options": {
+      "fix": "Fix: Change password to match payload user/role.",
+      "die": "Don't Fix: Exit SSO"
+    }
+  },
+  {
+    "id": "psso_user_error_email",
+    "name": "User Not Found, But Email In Use",
+    "desc": "This usually occurs when a previous visit had a buggy username, for example, it had a space in it when there should not have been. Note the only fix available is severe.",
+    "type": "radio",
+    "default": "fix",
+    "options": {
+      "fix": "Fix: Delete existing user, re-create new user.",
+      "die": "Don't Fix: Exit SSO"
+    }
+  },
+  {
+    "id": "psso_user_protectroles",
+    "name": "Roles to Protect",
+    "desc": "These roles will be protected from SSO fixes. Administrators are always protected.",
+    "type": "multicheck",
+    "default": "",
+    "options": "{{get_user_roles}}"
+  },
+  {
+    "id": "psso_user_protect",
+    "name": "User Names to Protect",
+    "desc": "The following users will be protected from SSO attempts to fix user issues.",
+    "type": "text_medium",
+    "default": "",
+    "repeatable": true,
+    "escape_cb": "stripslashes_deep"
+  },
+  {
+    "id": "psso_cookiegroup",
+    "type": "group",
+    "description": "You can use payload variable name in brackets [] as a placeholder for their values, as decrypted from payload. You can also use [role] to save the WP user role as a cookie.",
+    "options": {
+      "group_title": "Cookie {#}",
+      "add_button": "Add Another Cookie",
+      "remove_button": "Remove Cookie",
+      "sortable": false
+    },
+    "fields": [
+      {
+        "name": "Name",
+        "id": "name",
+        "type": "text",
+        "description": "Cookie name referenced by <code>$_COOKIE</code>",
+        "escape_cb": "stripslashes_deep"
+      },
+      {
+        "name": "Content",
+        "id": "content",
+        "type": "text",
+        "description": "Content",
+        "escape_cb": "stripslashes_deep"
+      },
+      {
+        "name": "Expires",
+        "id": "expires",
+        "type": "text_small",
+        "description": "When should the cookie expire, in hours?",
+        "escape_cb": "stripslashes_deep"
+      },
+      {
+        "name": "Critical?",
+        "description": "If this cookie cannot be set, should SSO fail?",
+        "id": "critical",
+        "type": "radio",
+        "default": "no",
+        "options": {
+          "yes": "Yes, exit SSO",
+          "no": "No, skip setting cookie"
+        }
+      }
+    ]
+  },
+  {
+    "id": "psso_rulegroup",
+    "type": "group",
+    "description": "If you add more than one \"check\" statement in a rule, the rule will only be followed if all of the check statements are true.",
+    "options": {
+      "group_title": "Rule {#}",
+      "add_button": "Add Another Rule",
+      "remove_button": "Remove Rule",
+      "sortable": true
+    },
+    "fields": [
+      {
+        "name": "Check",
+        "id": "rule",
+        "type": "textarea_code",
+        "description": "Only one logic operation within a check, one check per line.",
+        "escape_cb": "stripslashes_deep",
+        "attributes": {
+          "rows": 4
+        }
+      },
+      {
+        "name": "Go To",
+        "id": "go",
+        "type": "text",
+        "description": "URL user will be forwarded to. You can use payload variables within [brackets].",
+        "escape_cb": "stripslashes_deep"
+      }
+    ]
+  },
+  {
+    "id": "psso_ruleerror",
+    "name": "Default",
+    "desc": "If none of the rules match, go here. <code>*</code> will send them to the URL they arrived on, without query string.",
+    "type": "text_medium",
+    "escape_cb": "stripslashes_deep"
+  },
+  {
+    "id": "psso_decryptgroup",
+    "type": "group",
+    "description": "Use exact text strings and encodings.",
+    "options": {
+      "group_title": "Method {#}",
+      "add_button": "Add Another Method",
+      "remove_button": "Remove Method",
+      "sortable": true
+    },
+    "fields": [
+      {
+        "name": "Pass Phrase",
+        "desc": "The phrase used to access the key.",
+        "id": "pass",
+        "type": "text_medium",
+        "default": "ccsoc",
+        "escape_cb": "stripslashes_deep"
+      },
+      {
+        "name": "Private Key",
+        "desc": "PEM formatted private key.",
+        "id": "key",
+        "type": "textarea_code",
+        "attributes": {
+          "rows": 12
+        }
+      },
+      {
+        "name": "Key Format",
+        "description": "PHP OpenSSL can only accept PEM keys, if you choose DER as key type, SSO will attempt to convert it to PEM.",
+        "id": "key_format",
+        "type": "radio",
+        "default": "pem",
+        "options": {
+          "pem": "PEM",
+          "der": "DER"
+        }
+      },
+      {
+        "name": "Cipher Method",
+        "id": "cipher",
+        "type": "select",
+        "description": "Choose the OpenSSL cipher method. Shown in parens is the mcrypt method/mode which matches, if there is one.",
+        "options": "{{cipher_select}}"
+      },
+      {
+        "name": "OpenSSL Cipher Options",
+        "id": "cipher_opts",
+        "type": "select",
+        "description": "You can set the cipher options to one of these PHP constants.",
+        "options": "{{cipher_options_select}}"
+      },
+      {
+        "name": "IV string",
+        "description": "<p>If you leave this blank, SSO will try:<br>OpenSSL: Automatically find IV based on cipher.<br>Mcrypt: Use null bytes \"\\0\" at appropriate length for cipher.</p>",
+        "id": "iv",
+        "type": "text_medium",
+        "default": "",
+        "sanitization_cb": false,
+        "escape_cb": false
+      },
+      {
+        "name": "Remove IV from Payload",
+        "description": "The IV should be removed from front of payload, but some apps do not prepend the IV.",
+        "id": "iv_trim",
+        "type": "radio",
+        "default": "no",
+        "options": {
+          "yes": "Remove IV from front of payload",
+          "no": "Do Not Remove IV"
+        }
+      },
+      {
+        "name": "Raw URL Decode",
+        "description": "SSO will URL decode get keys by default",
+        "id": "rawurl",
+        "type": "radio",
+        "default": "on",
+        "options": {
+          "on": "Decode",
+          "off": "Do not decode"
+        }
+      },
+      {
+        "name": "Base 64 Decode",
+        "description": "SSO will base64 decode url-decoded keys by default",
+        "id": "base64",
+        "type": "radio",
+        "default": "on",
+        "options": {
+          "on": "Decode",
+          "off": "Do not decode"
+        }
+      },
+      {
+        "name": "PHP Decrypt Function",
+        "description": "Open SSL functions will be quite fussy about input. Note that mcrypt may not accept all options",
+        "id": "func",
+        "type": "radio",
+        "default": "openssl",
+        "options": {
+          "openssl": "OpenSSL",
+          "mcrypt": "Mcrypt"
+        }
+      },
+      {
+        "name": "Short Circuit Key",
+        "desc": "<p>SSO will look for this key in the query string and will directly access this configuration instead of using the waterfall. Be sure SSO is not configured to die if extra keys are present!</p>",
+        "id": "shortcircuit",
+        "type": "text_medium",
+        "default": "",
+        "escape_cb": "stripslashes_deep"
+      }
+    ]
+  },
+  {
+    "id": "psso_auth_login_location",
+    "name": "Login Form Location",
+    "desc": "Absolute URL. This is mainly used to redirect errors away from wp-login.php",
+    "type": "text",
+    "default": "",
+    "escape_cb": "stripslashes_deep"
+  },
+  {
+    "id": "psso_auth_client_id",
+    "name": "Schoolnet Client ID",
+    "desc": "This is your schoolnet project ID.",
+    "type": "text",
+    "default": "",
+    "escape_cb": "stripslashes_deep"
+  },
+  {
+    "id": "psso_auth_api_login",
+    "name": "Schoolnet Login API",
+    "desc": "URL of API logins are authorized against.",
+    "type": "text",
+    "default": "",
+    "escape_cb": "stripslashes_deep"
+  },
+  {
+    "id": "psso_auth_api_token",
+    "name": "Schoolnet Token API",
+    "desc": "URL of API tokens sent to.",
+
+    "type": "text",
+    "default": "",
+    "escape_cb": "stripslashes_deep"
+  },
+  {
+    "id": "psso_auth_api_config_payload_var",
+    "name": "Payload Environment Variable",
+    "desc": "The variable which, if set in payload, is used to set district.",
+    "type": "text_medium",
+    "default": "environment",
+    "escape_cb": "stripslashes_deep"
+  },
+  {
+    "id": "psso_auth_api_config_file",
+    "name": "District Configuration Files",
+    "desc": "This is the location of the json files with the details of individual districts. The \"%s\" will be replaced with the value of variable set above.",
+    "type": "text",
+    "default": "",
+    "escape_cb": "stripslashes_deep"
+  },
+  {
+    "id": "psso_trackgroup",
+    "type": "group",
+    "description": "Each method below will be used to confirm the track before setting it; SSO will stop when it has a match. Setting these rules can help with performance.",
+    "options": {
+      "group_title": "Confirm {#}",
+      "add_button": "Add Another Confirmation",
+      "remove_button": "Remove Confirmation",
+      "sortable": true
+    },
+    "fields": [
+      {
+        "name": "Check the Payload Environment Variable has",
+        "description": "",
+        "id": "chk",
+        "type": "radio",
+        "default": "always",
+        "options": {
+          "file": "A matching configuration file",
+          "list": "A district configured here",
+          "always": "Nothing; always set if in payload",
+          "off": "Never set"
+        }
+      }
+    ]
+  },
+  {
+    "id": "psso_distgroup",
+    "type": "group",
+    "description": "A list of districts that will populate the wordpress dropdown, can also be used to confirm track.",
+    "options": {
+      "group_title": "District {#}",
+      "add_button": "Add Another District",
+      "remove_button": "Remove District",
+      "sortable": true
+    },
+    "fields": [
+      {
+        "name": "Environment",
+        "id": "env",
+        "type": "text_medium",
+        "description": "The environment code",
+        "escape_cb": "stripslashes_deep"
+      },
+      {
+        "name": "Name",
+        "id": "name",
+        "type": "text",
+        "description": "District name as it appears in dropdown",
+        "escape_cb": "stripslashes_deep"
+      },
+      {
+        "name": "Providers",
+        "id": "providers",
+        "type": "textarea_code",
+        "description": "If the district has authentication providers, list them here, one per line: label, value (ex: \"Student\",student)",
+        "escape_cb": "stripslashes_deep",
+        "attributes":{
+          "rows": 4
+        }
+      }
+    ]
+  },
+  {
+    "id": "psso_distfill",
+    "name": "List",
+    "type": "textarea_code",
+    "description": "One district per line",
+    "escape_cb": "stripslashes_deep",
+    "attributes": {
+      "rows": 20
+    }
+  },
+  {
+    "id": "psso_auth_login_title",
+    "name": "Login Form: Title",
+    "desc": "Title above login form",
+    "type": "text",
+    "default": "Sign In with Pearson Schoolnet",
+    "escape_cb": "stripslashes_deep"
+  },
+  {
+    "id": "psso_auth_login_district",
+    "name": "Login Form: Districts Label",
+    "desc": "Label above district auto-complete",
+    "type": "text",
+    "default": "Password",
+    "escape_cb": "stripslashes_deep"
+  },
+  {
+    "id": "psso_error_login_general",
+    "name": "General \"Oops\" Message",
+    "desc": "Something went wrong, but not specifically called out above",
+    "type": "text",
+    "default": "Please try again.",
+    "escape_cb": "stripslashes_deep"
+  },
+  {
+    "id": "psso_error_login_environment_no_server",
+    "name": "Environment: API Down",
+    "desc": "Environment API could not be reached by PHP.",
+    "type": "text",
+    "default": "We could not reach the district authorization server, please try again.",
+    "escape_cb": "stripslashes_deep"
+  },
+  {
+    "id": "psso_error_login_environment_not_json",
+    "name": "Environment: Does Not Exist",
+    "desc": "Environment API returned error from given code",
+    "type": "text",
+    "default": "Your chosen district is not in our database.",
+    "escape_cb": "stripslashes_deep"
+  },
+  {
+    "id": "psso_error_login_environment_no_env",
+    "name": "Environment: Not Sent by App",
+    "desc": "There was no environment in the decrypted data.",
+    "type": "text",
+    "default": "Your chosen district is not in our database.",
+    "escape_cb": "stripslashes_deep"
+  },
+  {
+    "id": "psso_error_login_environment_sideways",
+    "name": "Environment: Variable Not in Right Format",
+    "desc": "The app has sent something other than a simple string as the environment.",
+    "type": "text",
+    "default": "Your chosen district is not in our database.",
+    "escape_cb": "stripslashes_deep"
+  },
+  {
+    "id": "psso_error_login_token_no_server",
+    "name": "Token: API Down",
+    "desc": "Pearson Token API could not be reached by PHP.",
+    "type": "text",
+    "default": "We could not reach the authorization server, please try again.",
+    "escape_cb": "stripslashes_deep"
+  },
+  {
+    "id": "psso_error_login_token_bad_request",
+    "name": "Token: API Error",
+    "desc": "\"Bad Request\" returned by Pearson API",
+    "type": "text",
+    "default": "Your account could not be authorized.",
+    "escape_cb": "stripslashes_deep"
+  },
+  {
+    "id": "psso_error_login_token_none",
+    "name": "Token: No Token Set",
+    "desc": "Either the app did not send a token or SSO could not set one.",
+    "type": "text",
+    "default": "We could not authorize your account.",
+    "escape_cb": "stripslashes_deep"
+  },
+  {
+    "id": "psso_error_login_token_sideways",
+    "name": "Token: Variable Not in Right Format",
+    "desc": "The app has sent something other than a simple string as the token.",
+    "type": "text",
+    "default": "We could not authorize your account."
+  },
+  {
+    "id": "psso_error_login_token_client",
+    "name": "Token: Client Token Error",
+    "desc": "Pearson auth does not like our combo of secret, user, etc.",
+    "type": "text",
+    "default": "Your account could not be authorized.",
+    "escape_cb": "stripslashes_deep"
+  },
+  {
+    "id": "psso_logs",
+    "name": "SSO Logs",
+    "desc": "",
+    "type": "radio_inline",
+    "default": "off",
+    "options": {
+      "on": "Turn Logs On",
+      "off": "Turn Logs Off"
+    }
+  },
+  {
+    "id": "psso_log_expire",
+    "name": "Delete Records Older Than",
+    "desc": "Number of days, 0 = never expire.",
+    "default": "30",
+    "type": "text_small",
+    "escape_cb": "stripslashes_deep"
+  },
+  {
+    "id": "psso_log_access",
+    "name": "Access to Log",
+    "desc": "Wordpress capability needed to view log.",
+    "default": "manage_options",
+    "type": "text_medium",
+    "escape_cb": "stripslashes_deep"
+  },
+  {
+    "id": "psso_log_form_visits",
+    "name": "Login Form Use",
+    "desc": "",
+    "type": "radio_inline",
+    "default": "off",
+    "options": {
+      "on": "Log all login form attempts",
+      "success": "Log only succesful logins",
+      "off": "Do not log use of login form"
+    }
+  },
+  {
+    "id": "psso_log_tests",
+    "name": "Tests",
+    "desc": "",
+    "type": "radio_inline",
+    "default": "off",
+    "options": {
+      "on": "Log use of test page",
+      "off": "Do not log test page"
+    }
+  },
+  {
+    "id": "psso_save",
+    "name": "Update",
+    "desc": "Save SSO Options",
+    "type": "options_save_button"
+  }
+]
